@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057B263490160040C7FE /* ActivitiesView.swift */; };
+		2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057E263490AC0040C7FE /* ProfileView.swift */; };
+		2B870582263490D00040C7FE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B870581263490D00040C7FE /* HistoryView.swift */; };
+		2B870586263493980040C7FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B870585263493980040C7FE /* HomeView.swift */; };
 		2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */; };
 		2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */; };
 		2BEE5097262C4CAD00ADA5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEE5096262C4CAD00ADA5B6 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B87057B263490160040C7FE /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		2B87057E263490AC0040C7FE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2B870581263490D00040C7FE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		2B870585263493980040C7FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2BEE508F262C4CAC00ADA5B6 /* RiseUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiseUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiseUpApp.swift; sourceTree = "<group>"; };
 		2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */,
+				2B87057B263490160040C7FE /* ActivitiesView.swift */,
+				2B870585263493980040C7FE /* HomeView.swift */,
 				2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */,
+				2B870581263490D00040C7FE /* HistoryView.swift */,
+				2B87057E263490AC0040C7FE /* ProfileView.swift */,
 				2BEE5096262C4CAD00ADA5B6 /* Assets.xcassets */,
 				2BEE509B262C4CAD00ADA5B6 /* Info.plist */,
 				2BEE5098262C4CAD00ADA5B6 /* Preview Content */,
@@ -138,6 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */,
+				2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */,
+				2B870582263490D00040C7FE /* HistoryView.swift in Sources */,
+				2B870586263493980040C7FE /* HomeView.swift in Sources */,
 				2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */,
 				2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */,
 			);
