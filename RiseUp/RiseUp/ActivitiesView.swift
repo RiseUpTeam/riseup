@@ -36,9 +36,11 @@ struct ActivitiesView: View {
                     Spacer()
                 }
                 Group {
-                    Text("Breathing")
-                        .font(.title)
-                        .padding(.bottom,10)
+                    NavigationLink(destination: BreathingView()){
+                        Text("Breathing")
+                            .font(.title)
+                            .padding(.bottom,10)
+                        }
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
