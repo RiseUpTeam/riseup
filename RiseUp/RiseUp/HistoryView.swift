@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppDevWithSwiftLibrary
 
 struct HistoryView: View {
     var body: some View {

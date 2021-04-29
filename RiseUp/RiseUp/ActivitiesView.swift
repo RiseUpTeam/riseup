@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppDevWithSwiftLibrary
 
 struct ActivitiesView: View {
     var body: some View {
@@ -13,17 +14,16 @@ struct ActivitiesView: View {
             Group {
                 Text("Feeling Anxious?")
                     .font(.largeTitle)
-                    .padding(.top)
-                Text("Choose something to help you calm yourself.")
+                    .padding()
+                Text("Choose an activity to help you manage your anxiety.")
                     .font(.title)
                     .multilineTextAlignment(.center)
-                    .padding([.leading, .trailing],20)
-            }.padding()
+            }
+            Spacer()
             Group {
                 Group {
                     Text("Music")
                         .font(.title)
-                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
@@ -39,7 +39,6 @@ struct ActivitiesView: View {
                     NavigationLink(destination: BreathingView()){
                         Text("Breathing")
                             .font(.title)
-                            .padding(.bottom,10)
                         }
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
@@ -55,7 +54,6 @@ struct ActivitiesView: View {
                 Group {
                     Text("Mindfulness")
                         .font(.title)
-                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
@@ -70,7 +68,6 @@ struct ActivitiesView: View {
                 Group {
                     Text("Movement")
                         .font(.title)
-                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
@@ -85,7 +82,6 @@ struct ActivitiesView: View {
                 Group {
                     Text("Journaling")
                         .font(.title)
-                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
@@ -100,7 +96,6 @@ struct ActivitiesView: View {
                 Group {
                     Text("Video")
                         .font(.title)
-                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)

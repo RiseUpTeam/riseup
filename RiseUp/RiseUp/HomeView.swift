@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppDevWithSwiftLibrary
 
 struct HomeView: View {
     var body: some View {
@@ -24,12 +25,12 @@ struct HomeView: View {
                     .multilineTextAlignment(.center)
                     .padding()
             }
-            NavigationLink(destination: ActivitiesView()) {
+            NavigationLink(destination: CheckInFeelings()) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 180, height: 50)
                         .foregroundColor(.green)
-                    Text("Get Started")
+                    Text("Do a Check-In")
                         .font(.title2)
                         .fontWeight(.heavy)
                         .foregroundColor(.blue)

@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B784D20263A0E0D000183E4 /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */; };
+		2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D21263B709A000183E4 /* CheckInFeelings.swift */; };
+		2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */; };
+		2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D25263B77B9000183E4 /* EmergencyView.swift */; };
+		2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */; };
 		2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057B263490160040C7FE /* ActivitiesView.swift */; };
 		2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057E263490AC0040C7FE /* ProfileView.swift */; };
 		2B870582263490D00040C7FE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B870581263490D00040C7FE /* HistoryView.swift */; };
@@ -19,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B784D21263B709A000183E4 /* CheckInFeelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInFeelings.swift; sourceTree = "<group>"; };
+		2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSymptomsView.swift; sourceTree = "<group>"; };
+		2B784D25263B77B9000183E4 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
+		2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionSettingsView.swift; sourceTree = "<group>"; };
 		2B87057B263490160040C7FE /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		2B87057E263490AC0040C7FE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2B870581263490D00040C7FE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -37,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B784D20263A0E0D000183E4 /* AppDevWithSwiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +76,11 @@
 				2B87057B263490160040C7FE /* ActivitiesView.swift */,
 				2BA76F252634E02800BBF203 /* BreathingView.swift */,
 				2B870585263493980040C7FE /* HomeView.swift */,
+				2B784D25263B77B9000183E4 /* EmergencyView.swift */,
+				2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */,
 				2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */,
+				2B784D21263B709A000183E4 /* CheckInFeelings.swift */,
+				2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */,
 				2B870581263490D00040C7FE /* HistoryView.swift */,
 				2B87057E263490AC0040C7FE /* ProfileView.swift */,
 				2BEE5096262C4CAD00ADA5B6 /* Assets.xcassets */,
@@ -100,6 +114,9 @@
 			dependencies = (
 			);
 			name = RiseUp;
+			packageProductDependencies = (
+				2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */,
+			);
 			productName = RiseUp;
 			productReference = 2BEE508F262C4CAC00ADA5B6 /* RiseUp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 2BEE5086262C4CAC00ADA5B6;
+			packageReferences = (
+				2B784D1E263A0E0D000183E4 /* XCRemoteSwiftPackageReference "AppDevWithSwiftLibrary" */,
+			);
 			productRefGroup = 2BEE5090262C4CAC00ADA5B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,10 +175,14 @@
 			files = (
 				2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */,
 				2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */,
+				2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */,
 				2BA76F262634E02800BBF203 /* BreathingView.swift in Sources */,
 				2B870582263490D00040C7FE /* HistoryView.swift in Sources */,
 				2B870586263493980040C7FE /* HomeView.swift in Sources */,
 				2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */,
+				2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */,
+				2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */,
+				2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */,
 				2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B784D1E263A0E0D000183E4 /* XCRemoteSwiftPackageReference "AppDevWithSwiftLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iitgrad/AppDevWithSwiftLibrary.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B784D1E263A0E0D000183E4 /* XCRemoteSwiftPackageReference "AppDevWithSwiftLibrary" */;
+			productName = AppDevWithSwiftLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BEE5087262C4CAC00ADA5B6 /* Project object */;
 }

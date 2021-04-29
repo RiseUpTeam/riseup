@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AppDevWithSwiftLibrary
+
 
 struct BreathingView: View {
     var body: some View {
