@@ -11,10 +11,9 @@ import AppDevWithSwiftLibrary
 struct BreathingView: View {
     @State var fadeInOut = false
     @State var animate = true
-    @State var s = CGFloat(0)
+    var s = 4.5
     var body : some View {
         VStack {
-            Spacer()
             ZStack{
                 Circle()
                     .fill(Color .green.opacity(0.25))
@@ -27,32 +26,30 @@ struct BreathingView: View {
                     .frame(width: animate ? 0 : 150)
                 Circle()
                     .fill(Color .blue)
-                    .frame(width: animate ? 0 : 50)
-            }.onAppear(){self.animate.toggle()}
-            .animation(Animation.easeInOut(duration: 3.0).repeatForever(autoreverses: true))
-            Text("Inhale")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.blue)
-                .frame(width: 200, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .onAppear(){
-                    withAnimation(Animation.easeInOut(duration: 3.0).repeatForever(autoreverses: true)) {
-                        fadeInOut.toggle()
-                    }
-                } .opacity(fadeInOut ? 0 : 1)
-            Text("Exhale")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.blue)
-                .frame(width: 200, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .padding(.bottom,50)
-                .onAppear(){
-                    withAnimation(Animation.easeInOut(duration: 3.0).repeatForever(autoreverses: true)) {
-                        fadeInOut.toggle()
-                    }
-                } .opacity(fadeInOut ? 1 : 0)
-            
-            Spacer()
+                    .frame(width: animate ? 0 : 30)
+            }.frame(width: 400, height: 400)
+            .onAppear(){self.animate.toggle()}
+            .animation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true))
+            VStack {
+                Text("Inhale")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.blue)
+                    .onAppear(){
+                        withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
+                            fadeInOut.toggle()
+                        }
+                    } .opacity(fadeInOut ? 0 : 1)
+                Text("Exhale")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.blue)
+                    .onAppear(){
+                        withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
+                            fadeInOut.toggle()
+                        }
+                    } .opacity(fadeInOut ? 1 : 0)
+            }
         }
     }
 }

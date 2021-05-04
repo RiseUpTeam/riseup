@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AppDevWithSwiftLibrary
 
 struct ActivitiesView: View {
     var body: some View {
@@ -15,23 +14,44 @@ struct ActivitiesView: View {
                 Text("Feeling Anxious?")
                     .font(.largeTitle)
                     .padding()
-                Text("Choose an activity to help you manage your anxiety.")
+                Text("Choose something to help you calm yourself.")
                     .font(.title)
                     .multilineTextAlignment(.center)
+                    .padding([.leading, .trailing],20)
             }
-            Spacer()
             Group {
+                Group {
+                    Text("Intervention Tiers based on Symptom Intensity")
+                        .font(.system(size: 15))
+                        .padding(.top)
+                        .padding([.bottom],5)
+                    HStack {
+                        Text("Low").padding([.leading, .trailing],30)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Low"))
+                        Text("Medium").padding([.leading, .trailing],30)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
+                        Text("High").padding([.leading, .trailing],30)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
+                    }
+                    Spacer()
+                }
                 Group {
                     Text("Music")
                         .font(.title)
+                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }
                     Spacer()
                 }
@@ -39,71 +59,86 @@ struct ActivitiesView: View {
                     NavigationLink(destination: BreathingView()){
                         Text("Breathing")
                             .font(.title)
+                            .padding(.bottom,10)
                         }
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }.padding(0)
                     Spacer()
                 }
                 Group {
                     Text("Mindfulness")
                         .font(.title)
+                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }
                     Spacer()
                 }
                 Group {
                     Text("Movement")
                         .font(.title)
+                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }
                     Spacer()
                 }
                 Group {
                     Text("Journaling")
                         .font(.title)
+                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }
                     Spacer()
                 }
                 Group {
                     Text("Video")
                         .font(.title)
+                        .padding(.bottom,10)
                     HStack {
                         Text("Label 1").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .background(Color.gray)
+                            .background(Color("Gray Low"))
                         Text("Label 2").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color("Gray Medium"))
                         Text("Label 3").padding([.leading, .trailing],30)
                             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            .background(Color.gray)
                     }
                     Spacer()
                 }
@@ -156,3 +191,4 @@ struct ActivitiesView_Previews: PreviewProvider {
         ActivitiesView()
     }
 }
+
