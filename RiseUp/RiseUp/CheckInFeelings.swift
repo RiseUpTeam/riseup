@@ -69,14 +69,14 @@ struct CheckInFeelings: View {
             }
             HStack {
                 NavigationLink(destination:CheckInSymptomsView()){
-                ZStack {
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 100, height: 50)
-                        .foregroundColor(.blue)
-                    Text("Submit") // will link to Symptom page
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                }.padding(.top, 30)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 4)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Submit") // will link to Symptom page
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }.padding(.top, 30)
                 }
             }
         }
