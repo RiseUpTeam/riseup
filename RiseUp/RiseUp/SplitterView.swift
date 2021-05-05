@@ -10,7 +10,11 @@ import SwiftUI
 struct SplitterView: View {
     var severity : Int
     var body: some View {
-        Text("Your severity is " + String(severity) + ".")
+        if severity == 10 {
+            EmergencyView()
+        } else {
+            ActivitiesView()
+        }
     }
 }
 

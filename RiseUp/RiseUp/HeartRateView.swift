@@ -39,13 +39,13 @@ struct HeartRateView: View {
                     .multilineTextAlignment(.center)
             }.padding()
             Spacer()
-            HStack{
+ /*           HStack{
                 Text("Feelings: " + String(feelings))
                 Text("Symptoms: " + String(symptoms))
                 Text("Level: " + String(level))
                 Text("Severity: " + String(s))
             }.padding()
-            NavigationLink(destination: SplitterView(severity: s)) {
+*/            NavigationLink(destination: SplitterView(severity: s)) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15.0)
                         .frame(width: 100, height: 50)
@@ -60,7 +60,7 @@ struct HeartRateView: View {
     }
     func calculateSeverity() {
         let hR = Double(heartRate)!
-        if hR > 150.0  || level == 10{
+        if hR > 150.0  || level == 10 {
             s = 10
         } else if hR > 110  || level == 9 {
             s = 9
