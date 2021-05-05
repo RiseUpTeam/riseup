@@ -2,7 +2,7 @@
 //  ProfileView.swift
 //  RiseUp
 //
-//  Created by Michael Rodgers on 4/24/21.
+//  Created by Rebecca Kornback on 4/24/21.
 //
 
 import SwiftUI

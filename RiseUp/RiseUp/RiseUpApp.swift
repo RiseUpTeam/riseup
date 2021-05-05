@@ -11,7 +11,7 @@ import SwiftUI
 struct RiseUpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(selectedView: 0)
         }
     }
 }

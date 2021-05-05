@@ -19,10 +19,12 @@ struct HomeView: View {
                     Text("Check In, Choose a Path, Calm Yourself")
                         .font(.title3)
                         .fontWeight(.semibold)
+                        .foregroundColor(.blue)
                     Spacer()
                     Text("Giving YOU the power to conquer your anxiety!")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
+                        .foregroundColor(.blue)
                         .multilineTextAlignment(.center)
                         .padding()
                 }
@@ -42,6 +44,7 @@ struct HomeView: View {
                 Group {
                     Text("Already have an account?")
                         .font(.title)
+                        .foregroundColor(.blue)
                     NavigationLink(destination: Text("Sign in")) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -56,6 +59,7 @@ struct HomeView: View {
                     .padding()
                     Text("Don't yet have an account?")
                         .font(.title3)
+                        .foregroundColor(.blue)
                     NavigationLink(destination: Text("Sign up")) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)

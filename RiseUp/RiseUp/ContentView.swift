@@ -9,31 +9,31 @@ import SwiftUI
 import AppDevWithSwiftLibrary
 
 struct ContentView: View {
-    @State var action: Bool = true
+    @State var selectedView : Int
     var body: some View {
-        TabView {
+        TabView(selection: $selectedView) {
             HomeView().tabItem {
                 Image(systemName: "house")
                 Text("Home")
-            }.foregroundColor(.blue)
+            }.tag(0)
             ActivitiesView().tabItem {
                 Image(systemName: "text.book.closed.fill")
                 Text("Activities")
-            }.foregroundColor(.blue)
+            }.tag(1)
             ProfileView().tabItem {
                 Image(systemName: "person.fill")
                 Text("Profile")
-            }.foregroundColor(.blue)
+            }.tag(2)
             HistoryView().tabItem {
                 Image(systemName: "chart.bar.xaxis")
                 Text("History")
-            }
+            }.tag(3)
         }.accentColor(.green)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(selectedView: 0)
     }
 }

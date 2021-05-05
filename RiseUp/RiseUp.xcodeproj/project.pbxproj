@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4313042643073C006F44C4 /* HeartRateView.swift */; };
+		2B43130726430F98006F44C4 /* SplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43130626430F98006F44C4 /* SplitterView.swift */; };
 		2B784D20263A0E0D000183E4 /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */; };
 		2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D21263B709A000183E4 /* CheckInFeelings.swift */; };
 		2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B4313042643073C006F44C4 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		2B43130626430F98006F44C4 /* SplitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterView.swift; sourceTree = "<group>"; };
 		2B784D21263B709A000183E4 /* CheckInFeelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInFeelings.swift; sourceTree = "<group>"; };
 		2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSymptomsView.swift; sourceTree = "<group>"; };
 		2B784D25263B77B9000183E4 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */,
 				2B784D21263B709A000183E4 /* CheckInFeelings.swift */,
 				2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */,
+				2B4313042643073C006F44C4 /* HeartRateView.swift */,
+				2B43130626430F98006F44C4 /* SplitterView.swift */,
 				2B870581263490D00040C7FE /* HistoryView.swift */,
 				2B87057E263490AC0040C7FE /* ProfileView.swift */,
 				2BEE5096262C4CAD00ADA5B6 /* Assets.xcassets */,
@@ -178,12 +184,14 @@
 				2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */,
 				2BA76F262634E02800BBF203 /* BreathingView.swift in Sources */,
 				2B870582263490D00040C7FE /* HistoryView.swift in Sources */,
+				2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */,
 				2B870586263493980040C7FE /* HomeView.swift in Sources */,
 				2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */,
 				2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */,
 				2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */,
 				2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */,
 				2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */,
+				2B43130726430F98006F44C4 /* SplitterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
