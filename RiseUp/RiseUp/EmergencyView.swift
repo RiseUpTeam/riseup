@@ -10,6 +10,9 @@ import SwiftUI
 struct EmergencyView: View {
     var body: some View {
         VStack(alignment: .center) {
+            Image("Rise Up")
+                .resizable().scaledToFit()
+                .padding(0)
             Spacer()
             Group {
             Text("Your check-in responses suggest urgency.")
@@ -44,7 +47,7 @@ struct EmergencyView: View {
                             }.padding()
                         }
             Spacer()
-        }.navigationBarHidden(true)
+        }
     }
 }
 

@@ -11,15 +11,10 @@ struct ActivitiesView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                Group {
-                    Text("Feeling Anxious?")
-                        .font(.largeTitle)
-                        .padding()
-                    Text("Choose something to help you calm yourself.")
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        .padding([.leading, .trailing],20)
-                }
+                Text("Choose something to help you calm yourself.")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                    .padding([.leading, .trailing],20)
                 Group {
                     Group {
                         Text("Intervention Tiers based on Symptom Intensity")
@@ -44,13 +39,13 @@ struct ActivitiesView: View {
                             .font(.title)
                             .padding(.bottom,10)
                         HStack {
-                            Text("Relaxing").padding([.leading, .trailing],30)
+                            Text("Weightless").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Low"))
-                            Text("Nature Sounds").padding([.leading, .trailing],30)
+                            Text("Watermark").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
-                            Text("Quiet Storm").padding([.leading, .trailing],30)
+                            Text("Waves And Water").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color.gray)
                         }
@@ -66,7 +61,7 @@ struct ActivitiesView: View {
                                     .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                     .background(Color("Gray Low"))
                             }
-                            Text("Four Square").padding([.leading, .trailing],30)
+                            Text("Focused Breath").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
                             Text("Deep").padding([.leading, .trailing],30)
@@ -80,13 +75,13 @@ struct ActivitiesView: View {
                             .font(.title)
                             .padding(.bottom,10)
                         HStack {
-                            Text("Label 1").padding([.leading, .trailing],30)
+                            Text("Mindful Release").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Low"))
-                            Text("Label 2").padding([.leading, .trailing],30)
+                            Text("Releasing").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
-                            Text("Label 3").padding([.leading, .trailing],30)
+                            Text("Let Go").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color.gray)
                         }
@@ -97,13 +92,13 @@ struct ActivitiesView: View {
                             .font(.title)
                             .padding(.bottom,10)
                         HStack {
-                            Text("Label 1").padding([.leading, .trailing],30)
+                            Text("Grounding").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Low"))
-                            Text("Label 2").padding([.leading, .trailing],30)
+                            Text("Walk").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
-                            Text("Label 3").padding([.leading, .trailing],30)
+                            Text("Muscle Relax").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color.gray)
                         }
@@ -114,30 +109,47 @@ struct ActivitiesView: View {
                             .font(.title)
                             .padding(.bottom,10)
                         HStack {
-                            Text("Label 1").padding([.leading, .trailing],30)
+                            Text("Mantra").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Low"))
-                            Text("Label 2").padding([.leading, .trailing],30)
+                            Text("Reframe").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
-                            Text("Label 3").padding([.leading, .trailing],30)
+                            Text("Unravel Thoughts").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color.gray)
                         }
                         Spacer()
                     }
                     Group {
-                        Text("Video")
+                        Text("Sensory")
                             .font(.title)
                             .padding(.bottom,10)
                         HStack {
-                            Text("Label 1").padding([.leading, .trailing],30)
+                            Text("Music Sketch").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Low"))
-                            Text("Label 2").padding([.leading, .trailing],30)
+                            Text("Temperature Change").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color("Gray Medium"))
-                            Text("Label 3").padding([.leading, .trailing],30)
+                            Text("Five Things").padding([.leading, .trailing],30)
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                .background(Color.gray)
+                        }
+                        Spacer()
+                    }
+                    Group {
+                        Text("Journaling")
+                            .font(.title)
+                            .padding(.bottom,10)
+                        HStack {
+                            Text("What Am I Feeling?").padding([.leading, .trailing],30)
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                .background(Color("Gray Low"))
+                            Text("Know Your Why").padding([.leading, .trailing],30)
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                .background(Color("Gray Medium"))
+                            Text("Positive Thoughts").padding([.leading, .trailing],30)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 .background(Color.gray)
                         }
@@ -155,4 +167,5 @@ struct ActivitiesView_Previews: PreviewProvider {
         ActivitiesView()
     }
 }
+
 

@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct CheckInSymptomsView : View {
-    var c : Int
+    var c = 5
+    @Environment(\.presentationMode) var presentationMode
     @State var checkCount = 0
     @State var level: Double = 0
     @State var isChecked : [String:Bool] = ["Worrying":false, "Sleeping": false, "Fatigue":false,
                                             "Sweating":false, "Breathing": false, "ChestPain":false,
                                             "Concentration":false, "Irritation": false, "Terror":false]
+    let radius = CGFloat(15)
     var body: some View {
         VStack {
+            Image("Rise Up")
+                .resizable().scaledToFit()
+                .padding(0)
             Text("What symptoms are you experiencing?")
                 .font(.title)
                 .multilineTextAlignment(.center)
@@ -125,7 +130,39 @@ struct CheckInSymptomsView : View {
                 }
             }
             .padding(.horizontal)
-            NavigationLink(destination: HeartRateView(feelings: c, symptoms: checkCount, level: Int(level))) {
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Cancel")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
+                Spacer()
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Submit")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
+                Spacer()
+            }.padding()
+            
+            
+       /*     NavigationLink(destination: HeartRateView(feelings: c, symptoms: checkCount, level: Int(level))) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15.0)
                         .frame(width: 100, height: 50)
@@ -134,10 +171,9 @@ struct CheckInSymptomsView : View {
                         .fontWeight(.bold)
                         .foregroundColor(.green)
                 }.padding()
-            }
-        }
+            }*/
+        }.navigationBarHidden(true)
         .padding()
-        .navigationBarHidden(true)
     }
     
     func toggleAndCount(s:String) {

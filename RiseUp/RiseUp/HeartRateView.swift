@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct HeartRateView: View {
-    var feelings: Int
-    var symptoms: Int
-    var level : Int
+    @Environment(\.presentationMode) var presentationMode
+    var feelings = 4
+    var symptoms = 2
+    var level = 8
     @State var s = 0
     @State var heartRate = ""
+    let radius = CGFloat(15)
     var body: some View {
         VStack (alignment: .center) {
+            Image("Rise Up")
+                .resizable().scaledToFit()
+                .padding(0)
             Text("Please check your heart rate.")
                 .font(.title)
                 .fontWeight(.bold)
@@ -34,29 +39,52 @@ struct HeartRateView: View {
                     .frame(width:150, height: 50)
                     .opacity(0)
                     .border(Color.blue, width:3)
-                TextField("",text: $heartRate, onCommit: {calculateSeverity()})
-                    .frame(width: 150, height: 50, alignment: .center)
-                    .multilineTextAlignment(.center)
+                TextField("",text: $heartRate, onCommit: {
+                    calculateSeverity()
+                })
+                .frame(width: 150, height: 50, alignment: .center)
+                .multilineTextAlignment(.center)
             }.padding()
             Spacer()
- /*           HStack{
-                Text("Feelings: " + String(feelings))
-                Text("Symptoms: " + String(symptoms))
-                Text("Level: " + String(level))
-                Text("Severity: " + String(s))
+            /*     HStack{
+             Text("Feelings: " + String(feelings))
+             Text("Symptoms: " + String(symptoms))
+             Text("Level: " + String(level))
+             Text("Severity: " + String(s))
+             }.padding()
+             */
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Cancel")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
+                Spacer()
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Submit")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
+                Spacer()
             }.padding()
-*/            NavigationLink(destination: SplitterView(severity: s)) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15.0)
-                        .frame(width: 100, height: 50)
-                        .foregroundColor(.blue)
-                    Text("Submit")
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                }.padding()
-            }
-            Spacer()
-        }.navigationBarHidden(true)
+        Spacer()
+        }
     }
     func calculateSeverity() {
         let hR = Double(heartRate)!

@@ -8,7 +8,9 @@
 import SwiftUI
 import AppDevWithSwiftLibrary
 
+
 struct HomeView: View {
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -28,7 +30,7 @@ struct HomeView: View {
                         .multilineTextAlignment(.center)
                         .padding()
                 }
-                NavigationLink(destination: CheckInFeelings()) {
+                NavigationLink(destination: CheckInView()) {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 180, height: 50)
