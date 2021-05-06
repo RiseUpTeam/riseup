@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4313042643073C006F44C4 /* HeartRateView.swift */; };
 		2B43130726430F98006F44C4 /* SplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43130626430F98006F44C4 /* SplitterView.swift */; };
+		2B722ABE2643FEC500E54742 /* SensoryActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */; };
+		2B722ABF2643FEC500E54742 /* JournalingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */; };
+		2B722AC02643FEC500E54742 /* BreathingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */; };
+		2B722AC12643FEC500E54742 /* MusicActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */; };
+		2B722AC22643FEC500E54742 /* MovementActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */; };
+		2B722AC32643FEC500E54742 /* SelfTalkActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */; };
+		2B722AC42643FEC500E54742 /* MindfulnessActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */; };
 		2B784D20263A0E0D000183E4 /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */; };
 		2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D21263B709A000183E4 /* CheckInFeelings.swift */; };
 		2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */; };
@@ -28,6 +35,13 @@
 /* Begin PBXFileReference section */
 		2B4313042643073C006F44C4 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		2B43130626430F98006F44C4 /* SplitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterView.swift; sourceTree = "<group>"; };
+		2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensoryActivitiesView.swift; sourceTree = "<group>"; };
+		2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalingActivitiesView.swift; sourceTree = "<group>"; };
+		2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingActivitiesView.swift; sourceTree = "<group>"; };
+		2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicActivitiesView.swift; sourceTree = "<group>"; };
+		2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementActivitiesView.swift; sourceTree = "<group>"; };
+		2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTalkActivitiesView.swift; sourceTree = "<group>"; };
+		2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindfulnessActivitiesView.swift; sourceTree = "<group>"; };
 		2B784D21263B709A000183E4 /* CheckInFeelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInFeelings.swift; sourceTree = "<group>"; };
 		2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSymptomsView.swift; sourceTree = "<group>"; };
 		2B784D25263B77B9000183E4 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
@@ -78,6 +92,13 @@
 			children = (
 				2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */,
 				2B87057B263490160040C7FE /* ActivitiesView.swift */,
+				2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */,
+				2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */,
+				2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */,
+				2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */,
+				2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */,
+				2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */,
+				2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */,
 				2BA76F252634E02800BBF203 /* BreathingView.swift */,
 				2B870585263493980040C7FE /* HomeView.swift */,
 				2B784D25263B77B9000183E4 /* EmergencyView.swift */,
@@ -179,19 +200,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B722AC22643FEC500E54742 /* MovementActivitiesView.swift in Sources */,
 				2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */,
+				2B722ABE2643FEC500E54742 /* SensoryActivitiesView.swift in Sources */,
 				2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */,
 				2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */,
 				2BA76F262634E02800BBF203 /* BreathingView.swift in Sources */,
+				2B722ABF2643FEC500E54742 /* JournalingActivitiesView.swift in Sources */,
 				2B870582263490D00040C7FE /* HistoryView.swift in Sources */,
 				2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */,
 				2B870586263493980040C7FE /* HomeView.swift in Sources */,
+				2B722AC42643FEC500E54742 /* MindfulnessActivitiesView.swift in Sources */,
+				2B722AC32643FEC500E54742 /* SelfTalkActivitiesView.swift in Sources */,
 				2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */,
 				2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */,
 				2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */,
+				2B722AC02643FEC500E54742 /* BreathingActivitiesView.swift in Sources */,
 				2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */,
 				2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */,
 				2B43130726430F98006F44C4 /* SplitterView.swift in Sources */,
+				2B722AC12643FEC500E54742 /* MusicActivitiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

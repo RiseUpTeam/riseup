@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import UIKit
+
+
 struct ProfileView: View {
     @State var userInputone: String = ""
     @State var userInputtwo: String = ""
@@ -22,29 +23,25 @@ struct ProfileView: View {
     @State var userCheckInFour: String = ""
     @State var userCheckInFive: String = ""
     @State private var showBreathing = true
+    @State private var showJournaling = true
     @State private var showMusic = true
     @State private var showMindfulness = true
     @State private var showMovement = true
     @State private var showSelfTalk = true
-    @State private var showVideo = true
+   
     @State private var showSensory = true
     
     
-    struct breathingActivity
-    {
-        var name:String
-        var intensityLevel: String
-    }
+    
+    
     var body: some View {
-        ZStack{
-            Color.white
-                .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                VStack(alignment: .center) {
-                    Group {
-                        Image("Rise Up")
-                            .resizable().scaledToFit()
-                            .padding([.leading, .trailing],25)
+        NavigationView {
+            ZStack{
+                Color.white
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    VStack(alignment: .center) {
+                        
                         Text("User Profile")
                             .font(.title3)
                             .fontWeight(.semibold)
@@ -402,7 +399,7 @@ struct ProfileView: View {
                                                 }; Spacer()
                                                     .frame(width: 0.0, height: 10.0)
                                                 HStack{
-                                                    Text("Check In Time 4")
+                                                    Text("Check In Time 5")
                                                         .font(.subheadline)
                                                         .multilineTextAlignment(.leading)
                                                         .padding([.leading, .trailing],25)
@@ -428,34 +425,203 @@ struct ProfileView: View {
                                 .multilineTextAlignment(.leading)
                                 .padding([.leading], 20)
                             Spacer()
-                            VStack{
-                                HStack{
-                                    Text("Breathing")
-                                        .multilineTextAlignment(.center)
-                                        .padding([.leading, .trailing],25)
-                                        .font(.subheadline)
-                                        .foregroundColor(Color.gray)
-                                        .font(.system(size: 12))
-                                    
-                                    Spacer()
-                                        .frame(width: 5.0, height: 2.0)
-                                    Toggle("", isOn: $showBreathing)
-                                        .padding([.leading, .trailing], 29)
-                                        .font(.subheadline)
+                                VStack{
+                                    VStack{
+                                        HStack{
+                                            Text("Music")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showMusic)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showMusic {
+                                            NavigationLink(destination: MusicActivitiesView()) {
+                                                Text("Music Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                        VStack{
+                                            HStack{
+                                                Text("Breathing")
+                                                    .multilineTextAlignment(.center)
+                                                    .padding([.leading, .trailing],25)
+                                                    .font(.subheadline)
+                                                    .foregroundColor(Color.gray)
+                                                    .font(.system(size: 12))
+                                                
+                                                Spacer()
+                                                    .frame(width: 5.0, height: 2.0)
+                                                Toggle("", isOn: $showBreathing)
+                                                    .padding([.leading, .trailing], 29)
+                                                    .font(.subheadline)
+                                            }
+                                            if showBreathing {
+                                                NavigationLink(destination: BreathingActivitiesView()) {
+                                                    Text("Breathing Activity Settings")
+                                                        .foregroundColor(Color.blue)
+                                                        .multilineTextAlignment(.leading)
+                                                        .font(.subheadline)
+                                                    
+                                                    
+                                                    
+                                                }
+                                            }
+                                            
+                                        }
+                                        
+                                    VStack{
+                                        HStack{
+                                            Text("Mindfulness")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showMindfulness)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showMindfulness {
+                                            NavigationLink(destination: MindfulnessActivitiesView()) {
+                                                Text("Mindfulness Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                    VStack{
+                                        HStack{
+                                            Text("Movement")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showMovement)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showMovement {
+                                            NavigationLink(destination: MovementActivitiesView()) {
+                                                Text("Movement Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                    VStack{
+                                        HStack{
+                                            Text("Self Talk")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showSelfTalk)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showSelfTalk {
+                                            NavigationLink(destination: SelfTalkActivitiesView()) {
+                                                Text("Self Talk Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                    VStack{
+                                        HStack{
+                                            Text("Sensory")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showSensory)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showSensory {
+                                            NavigationLink(destination: SensoryActivitiesView()) {
+                                                Text("Sensory Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                    VStack{
+                                        HStack{
+                                            Text("Journaling")
+                                                .multilineTextAlignment(.center)
+                                                .padding([.leading, .trailing],25)
+                                                .font(.subheadline)
+                                                .foregroundColor(Color.gray)
+                                                .font(.system(size: 12))
+                                        
+                                            Spacer()
+                                                .frame(width: 5.0, height: 2.0)
+                                            Toggle("", isOn: $showJournaling)
+                                                .padding([.leading, .trailing], 29)
+                                                .font(.subheadline)
+                                        }
+                                        if showJournaling {
+                                            NavigationLink(destination: JournalingActivitiesView()) {
+                                                Text("Journaling Activity Settings")
+                                                    .foregroundColor(Color.blue)
+                                                    .multilineTextAlignment(.leading)
+                                                    .font(.subheadline)
+                                                }
+                                            }
+                                            
+                                        }
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-    }
-}
+        
+    
+
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
 }
+
 
 
