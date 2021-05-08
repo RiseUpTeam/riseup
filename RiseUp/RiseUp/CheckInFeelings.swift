@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct CheckInFeelings: View {
     @Environment(\.presentationMode) var presentationMode

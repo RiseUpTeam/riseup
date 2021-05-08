@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct HeartRateView: View {
     @Environment(\.presentationMode) var presentationMode

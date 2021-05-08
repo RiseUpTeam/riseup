@@ -6,7 +6,15 @@
 //
 
 import SwiftUI
+import Foundation
 import AppDevWithSwiftLibrary
+
+struct Person : Hashable, Codable {
+    var id = UUID()
+    var userName = "safranklinson43"
+    var firstName = "Sebastian"
+    var password = "P&s5w0rd"
+}
 
 struct ContentView: View {
     @State var selectedView : Int

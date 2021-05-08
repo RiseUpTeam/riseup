@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct ProfileView: View {
     @State var userInputone: String = ""

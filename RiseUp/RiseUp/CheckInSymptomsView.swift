@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct CheckInSymptomsView : View {
     var c = 5

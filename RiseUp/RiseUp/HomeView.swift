@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
 import AppDevWithSwiftLibrary
-
 
 struct HomeView: View {
     
@@ -47,7 +47,7 @@ struct HomeView: View {
                     Text("Already have an account?")
                         .font(.title)
                         .foregroundColor(.blue)
-                    NavigationLink(destination: Text("Sign in")) {
+                    NavigationLink(destination: SignInView()) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 300, height: 60)
@@ -62,7 +62,7 @@ struct HomeView: View {
                     Text("Don't yet have an account?")
                         .font(.title3)
                         .foregroundColor(.blue)
-                    NavigationLink(destination: Text("Sign up")) {
+                    NavigationLink(destination: SignUpView()) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 140, height: 40)

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct EmergencyView: View {
     var body: some View {

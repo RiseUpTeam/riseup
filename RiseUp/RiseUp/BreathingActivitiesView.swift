@@ -8,6 +8,8 @@
 
 import SwiftUI
 import Foundation
+import AppDevWithSwiftLibrary
+
 struct BreathingActivitiesView: View {
     @State private var showSlowBreathing = false
     @State private var showLongExhale = false

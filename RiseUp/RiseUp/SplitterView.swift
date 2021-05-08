@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct SplitterView: View {
     var severity : Int

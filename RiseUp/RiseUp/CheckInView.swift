@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct CheckInView: View {
     @State private var isPresentedFeelings = false

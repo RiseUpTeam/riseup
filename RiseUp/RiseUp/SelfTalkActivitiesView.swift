@@ -5,8 +5,9 @@
 //  Created by Rebecca Kornack 2 on 5/5/21.
 //
 
-import Foundation
 import SwiftUI
+import Foundation
+import AppDevWithSwiftLibrary
 
 struct SelfTalkActivitiesView: View {
     @State private var showMantra = false
