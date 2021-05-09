@@ -24,7 +24,7 @@ struct SensoryActivitiesView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                     .padding([.top, .bottom])
-                Text("Choose at least one activity from each tier.")
+                Text("Choose at least one activity per tier.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
                     .padding([.top, .bottom])
