@@ -189,7 +189,7 @@ struct ProfileView: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding([.leading, .trailing],25)
                                                     .foregroundColor(Color.gray)
-                                                TextField("0:00 AM", text: $userCheckInOne)
+                                                TextField("0:00 AM", text: $userCheckInOne, onCommit: {setAlertTime1(alertTime1: userCheckInOne)})
                                                     .font(.system(size: 12))
                                                     .padding()
                                                     .background(Color(.lightGray))
@@ -209,7 +209,7 @@ struct ProfileView: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding([.leading, .trailing],25)
                                                     .foregroundColor(Color.gray)
-                                                TextField("0:00 AM", text: $userCheckInTwo)
+                                                TextField("0:00 AM", text: $userCheckInTwo, onCommit: {setAlertTime2(alertTime2: userCheckInTwo)})
                                                     .font(.system(size: 12))
                                                     .padding()
                                                     .background(Color(.lightGray))
@@ -221,7 +221,7 @@ struct ProfileView: View {
                                             Text("")
                                                 .padding(0)
                                                 .onAppear(perform: {setAlertFrequency(alertFrequency: checkInAmount)})
-                                         }
+                                        }
                                         if (checkInAmount >= 3) {
                                             HStack{
                                                 Text("Check In Time 3")
@@ -229,7 +229,7 @@ struct ProfileView: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding([.leading, .trailing],25)
                                                     .foregroundColor(Color.gray)
-                                                TextField("0:00 AM", text: $userCheckInThree)
+                                                TextField("0:00 AM", text: $userCheckInThree, onCommit: {setAlertTime3(alertTime3: userCheckInThree)})
                                                     .font(.system(size: 12))
                                                     .padding()
                                                     .background(Color(.lightGray))
@@ -241,7 +241,7 @@ struct ProfileView: View {
                                             Text("")
                                                 .padding(0)
                                                 .onAppear(perform: {setAlertFrequency(alertFrequency: checkInAmount)})
-                                         }
+                                        }
                                         if (checkInAmount >= 4) {
                                             HStack{
                                                 Text("Check In Time 4")
@@ -249,7 +249,7 @@ struct ProfileView: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding([.leading, .trailing],25)
                                                     .foregroundColor(Color.gray)
-                                                TextField("0:00 AM", text: $userCheckInFour)
+                                                TextField("0:00 AM", text: $userCheckInFour, onCommit: {setAlertTime4(alertTime4: userCheckInFour)})
                                                     .font(.system(size: 12))
                                                     .padding()
                                                     .background(Color(.lightGray))
@@ -261,7 +261,7 @@ struct ProfileView: View {
                                             Text("")
                                                 .padding(0)
                                                 .onAppear(perform: {setAlertFrequency(alertFrequency: checkInAmount)})
-                                         }
+                                        }
                                         if (checkInAmount >= 5) {
                                             HStack{
                                                 Text("Check In Time 5")
@@ -269,7 +269,7 @@ struct ProfileView: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding([.leading, .trailing],25)
                                                     .foregroundColor(Color.gray)
-                                                TextField("0:00 AM", text: $userCheckInFive)
+                                                TextField("0:00 AM", text: $userCheckInFive, onCommit: {setAlertTime5(alertTime5: userCheckInFive)})
                                                     .font(.system(size: 12))
                                                     .padding()
                                                     .background(Color(.lightGray))
@@ -281,7 +281,7 @@ struct ProfileView: View {
                                             Text("")
                                                 .padding(0)
                                                 .onAppear(perform: {setAlertFrequency(alertFrequency: checkInAmount)})
-                                         }
+                                        }
                                     }
                                 }
                                 Text("Intervention Settings")
@@ -299,7 +299,6 @@ struct ProfileView: View {
                                             .font(.subheadline)
                                             .foregroundColor(Color.gray)
                                             .font(.system(size: 12))
-                                        
                                         Spacer()
                                             .frame(width: 5.0, height: 2.0)
                                         Toggle("", isOn: $showMusic)
@@ -313,6 +312,11 @@ struct ProfileView: View {
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMusic(music: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMusic(music: false)})
                                     }
                                 }
                                 VStack{
@@ -331,15 +335,17 @@ struct ProfileView: View {
                                     }
                                     if showBreathing {
                                         NavigationLink(destination: BreathingActivitiesView()) {
-                                            Text("Breathing Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Breathing Activity Settings")                                           .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setBreathing(breathing: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setBreathing(breathing: false)})
                                     }
-                                    
                                 }
-                                
                                 VStack{
                                     HStack{
                                         Text("Mindfulness")
@@ -357,11 +363,15 @@ struct ProfileView: View {
                                     }
                                     if showMindfulness {
                                         NavigationLink(destination: MindfulnessActivitiesView()) {
-                                            Text("Mindfulness Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Mindfulness Activity Settings")                                         .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMindfulness(mindfulness: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMindfulness(mindfulness: false)})
                                     }
                                 }
                                 VStack{
@@ -381,13 +391,16 @@ struct ProfileView: View {
                                     }
                                     if showMovement {
                                         NavigationLink(destination: MovementActivitiesView()) {
-                                            Text("Movement Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Movement Activity Settings")                                         .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMovement(movement: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setMovement(movement: false)})
                                     }
-                                    
                                 }
                                 VStack{
                                     HStack{
@@ -406,13 +419,16 @@ struct ProfileView: View {
                                     }
                                     if showSelfTalk {
                                         NavigationLink(destination: SelfTalkActivitiesView()) {
-                                            Text("Self Talk Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Self Talk Activity Settings")                                         .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setSelfTalk(selfTalk: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setSelfTalk(selfTalk: false)})
                                     }
-                                    
                                 }
                                 VStack{
                                     HStack{
@@ -431,13 +447,16 @@ struct ProfileView: View {
                                     }
                                     if showSensory {
                                         NavigationLink(destination: SensoryActivitiesView()) {
-                                            Text("Sensory Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Sensory Activity Settings")                                         .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setSensory(sensory: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setSensory(sensory: false)})
                                     }
-                                    
                                 }
                                 VStack{
                                     HStack{
@@ -456,13 +475,16 @@ struct ProfileView: View {
                                     }
                                     if showJournaling {
                                         NavigationLink(destination: JournalingActivitiesView()) {
-                                            Text("Journaling Activity Settings")
-                                                .foregroundColor(Color.blue)
+                                            Text("Journaling Activity Settings")                                         .foregroundColor(Color.blue)
                                                 .multilineTextAlignment(.leading)
                                                 .font(.subheadline)
                                         }
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setJournaling(journaling: true)})
+                                    } else {
+                                        Text("").padding(0)
+                                            .onAppear(perform: {setJournaling(journaling: false)})
                                     }
-                                    
                                 }
                             }
                         }
@@ -485,6 +507,18 @@ struct ProfileView: View {
                 showRing = getRing()
                 showLight = getLight()
                 checkInAmount = getAlertFrequency()
+                userCheckInOne   = getAlertTime1()
+                userCheckInTwo   = getAlertTime2()
+                userCheckInThree = getAlertTime3()
+                userCheckInFour  = getAlertTime4()
+                userCheckInFive  = getAlertTime5()
+                showMusic = getMusic()
+                showBreathing = getBreathing()
+                showMindfulness = getMindfulness()
+                showMovement = getMovement()
+                showSelfTalk = getSelfTalk()
+                showSensory = getSensory()
+                showJournaling = getJournaling()
             })
         }
     }
@@ -744,8 +778,8 @@ struct ProfileView: View {
     func getAlertTime5() -> String {
         return person.alertTime5
     }
-    func getMusic() -> String {
-        return String(person.music)
+    func getMusic() -> Bool {
+        return person.music
     }
     func getMusicLow() -> String {
         return person.musicLow
@@ -756,8 +790,8 @@ struct ProfileView: View {
     func getMusicHigh() -> String {
         return person.musicHigh
     }
-    func getBreathing() -> String {
-        return String(person.breathing)
+    func getBreathing() -> Bool {
+        return person.breathing
     }
     func getBreathingLow() -> String {
         return person.breathingLow
@@ -768,8 +802,8 @@ struct ProfileView: View {
     func getBreathingHigh() -> String {
         return person.breathingHigh
     }
-    func getMindfulness() -> String {
-        return String(person.mindfulness)
+    func getMindfulness() -> Bool {
+        return person.mindfulness
     }
     func getMindfulnessLow() -> String {
         return person.mindfulnessLow
@@ -780,8 +814,8 @@ struct ProfileView: View {
     func getMindfulnessHigh() -> String {
         return person.mindfulnessHigh
     }
-    func getMovement() -> String {
-        return String(person.movement)
+    func getMovement() -> Bool {
+        return person.movement
     }
     func getMovementLow() -> String {
         return person.movementLow
@@ -792,8 +826,8 @@ struct ProfileView: View {
     func getMovementHigh() -> String {
         return person.movementHigh
     }
-    func getSelfTalk() -> String {
-        return String(person.selfTalk)
+    func getSelfTalk() -> Bool {
+        return person.selfTalk
     }
     func getSelfTalkLow() -> String {
         return person.selfTalkLow
@@ -804,8 +838,8 @@ struct ProfileView: View {
     func getSelfTalkHigh() -> String {
         return person.selfTalkHigh
     }
-    func getSensory() -> String {
-        return String(person.sensory)
+    func getSensory() -> Bool {
+        return person.sensory
     }
     func getSensoryLow() -> String {
         return person.sensoryLow
@@ -816,8 +850,8 @@ struct ProfileView: View {
     func getSensoryHigh() -> String {
         return person.sensoryHigh
     }
-    func getJournaling() -> String {
-        return String(person.journaling)
+    func getJournaling() -> Bool {
+        return person.journaling
     }
     func getJournalingLow() -> String {
         return person.journalingLow
