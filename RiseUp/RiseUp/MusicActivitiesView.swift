@@ -10,6 +10,7 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct MusicActivitiesView: View {
+    @State var person = Person()
     @State private var showWeightless = false
     @State private var showElectra = false
     @State private var showWatermark = false
@@ -19,48 +20,86 @@ struct MusicActivitiesView: View {
     var body: some View {
         NavigationView{
             List{
+                Text("Music Activities")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding([.top, .bottom])
                 Text("Choose at least one activity from each tier.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
-                
-                
-                Group{
+                    .padding([.top, .bottom])
+                Group {
                     Text("Intervention Level: Low")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Weightless By: Marconi Union", isOn: $showWeightless)
-                    if showWeightless {
-                    }
                     Toggle("Electra By: Airstream", isOn: $showElectra)
-                    if showElectra {
-                        
-                    }
                 }
-                Group{
+                Spacer()
+                Group {
                     Text("Intervention Level: Moderate")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Watermark By: Enya", isOn: $showWatermark)
-                    if showWatermark {
-                        
-                    }
                     Toggle("Pure Shores By: All Saints", isOn: $showPureShores)
-                    if showPureShores {
-                        
-                    }
                 }
-                Group{
+                Spacer()
+                Group {
                     Text("Intervention Level: High")
-                        .font(.title)
-                    Toggle("Waves And Water By: YouTube", isOn: $showWatermark)
-                    if showWatermark {
-                        
-                    }
+                        .font(.title3)
+                    Toggle("Waves And Water By: YouTube", isOn: $showWavesAndWater)
                     Toggle("Nature Sounds By: You Tube", isOn: $showNature)
-                    if showNature {
-                        
-                    }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
+            }
+            .navigationBarHidden(true)
+            .onAppear(perform: {
+                person = UserDefaults.standard.getStructValue(forKey: "user")!
+                if getMusicLow()=="Weightless" {
+                    showWeightless = true
+                    showElectra = false
+                } else {
+                    showWeightless = false
+                    showElectra = true
+                }
+                if getMusicModerate()=="Watermark" {
+                    showWatermark = true
+                    showPureShores = false
+                } else {
+                    showWatermark = false
+                    showPureShores = true
+                }
+                if getMusicHigh()=="Waves" {
+                    showWavesAndWater = true
+                    showNature = false
+                } else {
+                    showWavesAndWater = false
+                    showNature = true
+                }
+            })
         }
+    }
+    func writeToUserDefaults() {
+        UserDefaults.standard.setStructValue(value: person, forKey: "user")
+        UserDefaults.standard.synchronize()
+    }
+    func setMusicLow(musicLow: String) {
+        person.musicLow = musicLow
+        writeToUserDefaults()
+    }
+    func setMusicModerate(musicModerate: String) {
+        person.musicModerate = musicModerate
+        writeToUserDefaults()
+    }
+    func setMusicHigh(musicHigh: String) {
+        person.musicHigh = musicHigh
+        writeToUserDefaults()
+    }
+    func getMusicLow() -> String {
+        return person.musicLow
+    }
+    func getMusicModerate() -> String {
+        return person.musicModerate
+    }
+    func getMusicHigh() -> String {
+        return person.musicHigh
     }
 }
 

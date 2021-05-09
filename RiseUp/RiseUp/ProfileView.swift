@@ -38,12 +38,14 @@ struct ProfileView: View {
                 Color.white
                     .edgesIgnoringSafeArea(.all)
                 ScrollView {
-                    VStack(alignment: .center) {
+/*                        VStack(alignment: .center) {
                         Text("User Profile")
                             .font(.title3)
                             .fontWeight(.semibold)
                             .padding([.leading, .trailing],25)
-                    }; Spacer()
+                     }
+*/
+                    Spacer()
                     HStack{
                         Text("User Name")
                             .font(.subheadline)
@@ -496,7 +498,7 @@ struct ProfileView: View {
                         }
                     }
                 }
-            }
+            }.navigationBarTitle("User Profile", displayMode: .inline)
             .onAppear(perform: {
                 person = UserDefaults.standard.getStructValue(forKey: "user")!
                 userInputone = getName()
@@ -666,6 +668,10 @@ struct ProfileView: View {
     }
     func setMovementLow(movementLow: String) {
         person.movementLow = movementLow
+        writeToUserDefaults()
+    }
+    func setMovementModerate(movementModerate: String) {
+        person.movementModerate = movementModerate
         writeToUserDefaults()
     }
     func setMovementHigh(movementHigh: String) {

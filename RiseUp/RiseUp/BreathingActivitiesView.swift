@@ -11,6 +11,7 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct BreathingActivitiesView: View {
+    @State var person = Person()
     @State private var showSlowBreathing = false
     @State private var showLongExhale = false
     @State private var showFocusedBreath = false
@@ -20,51 +21,88 @@ struct BreathingActivitiesView: View {
         var body: some View {
         NavigationView{
             List{
+                Text("Breathing Activities")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding([.top, .bottom])
                 Text("Choose at least one activity from each tier.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
-                
-                
+                    .padding([.top, .bottom])
                 Group{
                     Text("Intervention Level: Low")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Slow Breathing", isOn: $showSlowBreathing)
-                    if showSlowBreathing {
-                    }
                     Toggle("Long Exhale", isOn: $showLongExhale)
-                    if showLongExhale {
-                        
-                    }
                 }
+                Spacer()
                 Group{
                     Text("Intervention Level: Moderate")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Focused Breath", isOn: $showFocusedBreath)
-                    if showFocusedBreath {
-                        
-                    }
                     Toggle("Equal Breath", isOn: $showEqualBreath)
-                    if showEqualBreath {
-                        
-                    }
                 }
+                Spacer()
                 Group{
                     Text("Intervention Level: High")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Four Square Breathing", isOn: $showFourSquare)
-                    if showFourSquare {
-                        
-                    }
                     Toggle("Deep Breathing", isOn: $showDeepBreathing)
-                    if showDeepBreathing {
-                        
-                    }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
-            
+            }.navigationBarHidden(true)
+            .onAppear(perform: {
+                person = UserDefaults.standard.getStructValue(forKey: "user")!
+                if getBreathingLow()=="SlowBreathing" {
+                    showSlowBreathing = true
+                    showLongExhale = false
+                } else {
+                    showSlowBreathing = false
+                    showLongExhale = true
+                }
+                if getBreathingModerate()=="FocusedBreath" {
+                    showFocusedBreath = true
+                    showEqualBreath = false
+                } else {
+                    showFocusedBreath = false
+                    showEqualBreath = true
+                }
+                if getBreathingHigh()=="FourSquare" {
+                    showFourSquare = true
+                    showDeepBreathing = false
+                } else {
+                    showFourSquare = false
+                    showDeepBreathing = true
+                }
+            })
         }
     }
+    func writeToUserDefaults() {
+        UserDefaults.standard.setStructValue(value: person, forKey: "user")
+        UserDefaults.standard.synchronize()
+    }
+    func setBreathingLow(breathingLow: String) {
+        person.breathingLow = breathingLow
+        writeToUserDefaults()
+    }
+    func setBreathingModerate(breathingModerate: String) {
+        person.breathingModerate = breathingModerate
+        writeToUserDefaults()
+    }
+    func setBreathingHigh(breathingHigh: String) {
+        person.breathingHigh = breathingHigh
+        writeToUserDefaults()
+    }
+    func getBreathingLow() -> String {
+        return person.breathingLow
+    }
+    func getBreathingModerate() -> String {
+        return person.breathingModerate
+    }
+    func getBreathingHigh() -> String {
+        return person.breathingHigh
+    }
 }
+
 struct BreathingActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
         BreathingActivitiesView()

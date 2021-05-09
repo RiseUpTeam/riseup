@@ -10,6 +10,7 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct MindfulnessActivitiesView: View {
+    @State var person = Person()
     @State private var showMindfulRelease = false
     @State private var showLetGoShort = false
     @State private var showReleasing = false
@@ -19,48 +20,85 @@ struct MindfulnessActivitiesView: View {
         var body: some View {
         NavigationView{
             List{
+                Text("Mindfulness Activities")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding([.top, .bottom])
                 Text("Choose at least one activity from each tier.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
-                
-                
+                    .padding([.top, .bottom])
                 Group{
                     Text("Intervention Level: Low")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Two Minute Mindful Release", isOn: $showMindfulRelease)
-                    if showMindfulRelease {
-                    }
                     Toggle("Let Go of Worry and Anxiety", isOn: $showLetGoShort)
-                    if showLetGoShort {
-                        
-                    }
                 }
+                Spacer()
                 Group{
                     Text("Intervention Level: Moderate")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Releasing Anxiety", isOn: $showReleasing)
-                    if showReleasing {
-                        
-                    }
                     Toggle("Decrease Anxiety & Increase Peace", isOn: $showAnxietyAndPeace)
-                    if showAnxietyAndPeace {
-                        
-                    }
                 }
+                Spacer()
                 Group{
                     Text("Intervention Level: High")
-                        .font(.title)
+                        .font(.title3)
                     Toggle("Let Go of Fear, Worries, and Anxiety", isOn: $showLetGoLong)
-                    if showLetGoLong {
-                        
-                    }
                     Toggle("Breathing in the Light", isOn: $showBreathingInLight)
-                    if showBreathingInLight {
-                        
-                    }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
+            }.navigationBarHidden(true)
+            .onAppear(perform: {
+                person = UserDefaults.standard.getStructValue(forKey: "user")!
+                if getMindfulnessLow()=="TwoMinute" {
+                    showMindfulRelease = true
+                    showLetGoShort = false
+                } else {
+                    showMindfulRelease = false
+                    showLetGoShort = true
+                }
+                if getMindfulnessModerate()=="ReleasingAnxiety" {
+                    showReleasing = true
+                    showAnxietyAndPeace = false
+                } else {
+                    showReleasing = false
+                    showAnxietyAndPeace = true
+                }
+                if getMindfulnessHigh()=="LetGo" {
+                    showLetGoLong = true
+                    showBreathingInLight = false
+                } else {
+                    showLetGoLong = false
+                    showBreathingInLight = true
+                }
+            })
         }
+    }
+    func writeToUserDefaults() {
+        UserDefaults.standard.setStructValue(value: person, forKey: "user")
+        UserDefaults.standard.synchronize()
+    }
+    func setMindfulnessLow(mindfulnessLow: String) {
+        person.mindfulnessLow = mindfulnessLow
+        writeToUserDefaults()
+    }
+    func setMindfulnessModerate(mindfulnessModerate: String) {
+        person.mindfulnessModerate = mindfulnessModerate
+        writeToUserDefaults()
+    }
+    func setMindfulnessHigh(mindfulnessHigh: String) {
+        person.mindfulnessHigh = mindfulnessHigh
+        writeToUserDefaults()
+    }
+    func getMindfulnessLow() -> String {
+        return person.mindfulnessLow
+    }
+    func getMindfulnessModerate() -> String {
+        return person.mindfulnessModerate
+    }
+    func getMindfulnessHigh() -> String {
+        return person.mindfulnessHigh
     }
 }
 struct MindfulnessActivitiesView_Previews: PreviewProvider {
