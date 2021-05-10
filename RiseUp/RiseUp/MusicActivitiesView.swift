@@ -18,7 +18,6 @@ struct MusicActivitiesView: View {
     @State private var showWavesAndWater = false
     @State private var showNature = false
     var body: some View {
-        NavigationView{
             List{
                 Text("Music Activities")
                     .font(.title)
@@ -49,7 +48,6 @@ struct MusicActivitiesView: View {
                     Toggle("Nature Sounds By: You Tube", isOn: $showNature)
                 }
             }
-            .navigationBarHidden(true)
             .onAppear(perform: {
                 person = UserDefaults.standard.getStructValue(forKey: "user")!
                 if getMusicLow()=="Weightless" {
@@ -74,7 +72,6 @@ struct MusicActivitiesView: View {
                     showNature = true
                 }
             })
-        }
     }
     func writeToUserDefaults() {
         UserDefaults.standard.setStructValue(value: person, forKey: "user")

@@ -18,62 +18,60 @@ struct SensoryActivitiesView: View {
     @State private var showHoldYourSenses = false
     @State private var showFiveThings = false
     var body: some View {
-        NavigationView{
-            List{
-                Text("Sensory Activities")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding([.top, .bottom])
-                Text("Choose at least one activity per tier.")
+        List{
+            Text("Sensory Activities")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding([.top, .bottom])
+            Text("Choose at least one activity per tier.")
+                .font(.title3)
+                .multilineTextAlignment(.center)
+                .padding([.top, .bottom])
+            Group{
+                Text("Intervention Level: Low")
                     .font(.title3)
-                    .multilineTextAlignment(.center)
-                    .padding([.top, .bottom])
-                Group{
-                    Text("Intervention Level: Low")
-                        .font(.title3)
-                    Toggle("Music Sketch", isOn: $showMusicSketch)
-                    Toggle("Coloring Exercise", isOn: $showColoring)
-                }
-                Spacer()
-                Group{
-                    Text("Intervention Level: Moderate")
-                        .font(.title3)
-                    Toggle("Temperature Change", isOn: $showTemperatureChange)
-                    Toggle("Add Weight to your Body", isOn: $showWeight)
-                }
-                Spacer()
-                Group{
-                    Text("Intervention Level: High")
-                        .font(.title3)
-                    Toggle("Hold and Focus on your Senses", isOn: $showHoldYourSenses)
-                    Toggle("Five Things Exercise", isOn: $showFiveThings)
-                }
-            }.navigationBarHidden(true)
-            .onAppear(perform: {
-                person = UserDefaults.standard.getStructValue(forKey: "user")!
-                if getSensoryLow()=="Sketch" {
-                    showMusicSketch = true
-                    showColoring = false
-                } else {
-                    showMusicSketch = false
-                    showColoring = true
-                }
-                if getSensoryModerate()=="Temperature" {
-                    showTemperatureChange = true
-                    showWeight = false
-                } else {
-                    showTemperatureChange = false
-                    showWeight = true
-                }
-                if getSensoryHigh()=="Focus" {
-                    showHoldYourSenses = true
-                    showFiveThings = false
-                } else {
-                    showHoldYourSenses = false
-                    showFiveThings = true
-                }
-            })
+                Toggle("Music Sketch", isOn: $showMusicSketch)
+                Toggle("Coloring Exercise", isOn: $showColoring)
+            }
+            Spacer()
+            Group{
+                Text("Intervention Level: Moderate")
+                    .font(.title3)
+                Toggle("Temperature Change", isOn: $showTemperatureChange)
+                Toggle("Add Weight to your Body", isOn: $showWeight)
+            }
+            Spacer()
+            Group{
+                Text("Intervention Level: High")
+                    .font(.title3)
+                Toggle("Hold and Focus on your Senses", isOn: $showHoldYourSenses)
+                Toggle("Five Things Exercise", isOn: $showFiveThings)
+            }
         }
+        .onAppear(perform: {
+            person = UserDefaults.standard.getStructValue(forKey: "user")!
+            if getSensoryLow()=="Sketch" {
+                showMusicSketch = true
+                showColoring = false
+            } else {
+                showMusicSketch = false
+                showColoring = true
+            }
+            if getSensoryModerate()=="Temperature" {
+                showTemperatureChange = true
+                showWeight = false
+            } else {
+                showTemperatureChange = false
+                showWeight = true
+            }
+            if getSensoryHigh()=="Focus" {
+                showHoldYourSenses = true
+                showFiveThings = false
+            } else {
+                showHoldYourSenses = false
+                showFiveThings = true
+            }
+        })
     }
     func writeToUserDefaults() {
         UserDefaults.standard.setStructValue(value: person, forKey: "user")

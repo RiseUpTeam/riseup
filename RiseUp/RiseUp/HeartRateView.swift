@@ -22,7 +22,7 @@ struct HeartRateView: View {
             Image("Rise Up")
                 .resizable().scaledToFit()
                 .padding(0)
-            Text("Please check your heart rate.")
+            Text("Check your heart rate.")
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)

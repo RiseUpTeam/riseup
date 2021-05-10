@@ -18,53 +18,78 @@ struct CheckInView: View {
             Image("Rise Up")
                 .resizable().scaledToFit()
                 .padding(0)
-            Spacer()
-            Button(action: {
-                isPresentedFeelings.toggle()
-            },
-            label: {
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 280, height: 50)
-                        .foregroundColor(.green)
-                    Text("Check your feelings")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.blue)
-                }
-            }).fullScreenCover(isPresented: $isPresentedFeelings, content: CheckInFeelings.init)
-            Spacer()
-            Button(action: {
-                isPresentedSymptoms.toggle()
-            },
-            label: {
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 280, height: 50)
-                        .foregroundColor(.green)
-                    Text("Check your symptoms")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.blue)
-                }
-            }).fullScreenCover(isPresented: $isPresentedSymptoms, content: CheckInSymptomsView.init)
-            Spacer()
-            Button(action: {
-                isPresentedHeartRate.toggle()
-            },
-            label: {
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 280, height: 50)
-                        .foregroundColor(.green)
-                    Text("Check your heart rate")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.blue)
-                }
-            }).fullScreenCover(isPresented: $isPresentedHeartRate, content: HeartRateView.init)
-        Spacer()
+            Group {
+                Text("Step 1:")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.blue)
+                Button(action: {
+                    isPresentedFeelings.toggle()
+                },
+                label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.green)
+                        Text("Check your feelings")
+                            .font(.title2)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.blue)
+                    }
+                }).fullScreenCover(isPresented: $isPresentedFeelings, content: CheckInFeelings.init)
+                Spacer()
+            }
+            Group {
+                Text("Step 2:")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.blue)
+                Button(action: {
+                    isPresentedSymptoms.toggle()
+                },
+                label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.green)
+                        Text("Check your symptoms")
+                            .font(.title2)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.blue)
+                    }
+                }).fullScreenCover(isPresented: $isPresentedSymptoms, content: CheckInSymptomsView.init)
+                Spacer()
+            }
+            Group {
+                Text("Step 3:")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.blue)
+                Button(action: {
+                    isPresentedHeartRate.toggle()
+                },
+                label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.green)
+                        Text("Check your heart rate")
+                            .font(.title2)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.blue)
+                    }
+                }).fullScreenCover(isPresented: $isPresentedHeartRate, content: HeartRateView.init)
+                Spacer()
+            }
+            Group {
+                Text("Step 4: Choose an Activity")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.blue)
+                Spacer()
+            }
         }
+        .navigationTitle("Check-In")
     }
 }
 

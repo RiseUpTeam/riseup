@@ -17,7 +17,7 @@ struct CheckInFeelings: View {
                                           "Panicky":false, "Angry":false]
     let radius = CGFloat(15)
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 Group {
                     Image("Rise Up")
@@ -151,8 +151,8 @@ struct CheckInFeelings: View {
                     Spacer()
                 }.padding()
                 Spacer()
-            }.navigationBarHidden(true)
-        }
+            }//.navigationBarHidden(true)
+       // }
     }
     
     func doPressed(b: String) {

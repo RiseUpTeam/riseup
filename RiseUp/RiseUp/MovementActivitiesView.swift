@@ -17,63 +17,61 @@ struct MovementActivitiesView: View {
     @State private var showStretch = false
     @State private var showMuscleRelax = false
     @State private var showYoga = false
-        var body: some View {
-        NavigationView{
-            List{
-                Text("Movement Activities")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding([.top, .bottom])
-                Text("Choose at least one activity per tier.")
+    var body: some View {
+        List{
+            Text("Movement Activities")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding([.top, .bottom])
+            Text("Choose at least one activity per tier.")
+                .font(.title3)
+                .multilineTextAlignment(.center)
+                .padding([.top, .bottom])
+            Group{
+                Text("Intervention Level: Low")
                     .font(.title3)
-                    .multilineTextAlignment(.center)
-                    .padding([.top, .bottom])
-                Group{
-                    Text("Intervention Level: Low")
-                        .font(.title3)
-                    Toggle("Grounding Exercise", isOn: $showGrounding)
-                    Toggle("Hand Exercise", isOn: $showHands)
-                }
-                Spacer()
-                Group{
-                    Text("Intervention Level: Moderate")
-                        .font(.title3)
-                    Toggle("Take a Walk", isOn: $showWalk)
-                    Toggle("Simple Stretching", isOn: $showStretch)
-                }
-                Spacer()
-                Group{
-                    Text("Intervention Level: High")
-                        .font(.title3)
-                    Toggle("Muscle Relaxation Exercise", isOn: $showMuscleRelax)
-                    Toggle("Yoga Sequence", isOn: $showYoga)
-                }
-            }.navigationBarHidden(true)
-            .onAppear(perform: {
-                person = UserDefaults.standard.getStructValue(forKey: "user")!
-                if getMovementLow()=="Grounding" {
-                    showGrounding = true
-                    showHands = false
-                } else {
-                    showGrounding = false
-                    showHands = true
-                }
-                if getMovementModerate()=="Walk" {
-                    showWalk = true
-                    showStretch = false
-                } else {
-                    showWalk = false
-                    showStretch = true
-                }
-                if getMovementHigh()=="MuscleRelaxation" {
-                    showMuscleRelax = true
-                    showYoga = false
-                } else {
-                    showMuscleRelax = false
-                    showYoga = true
-                }
-            })
+                Toggle("Grounding Exercise", isOn: $showGrounding)
+                Toggle("Hand Exercise", isOn: $showHands)
+            }
+            Spacer()
+            Group{
+                Text("Intervention Level: Moderate")
+                    .font(.title3)
+                Toggle("Take a Walk", isOn: $showWalk)
+                Toggle("Simple Stretching", isOn: $showStretch)
+            }
+            Spacer()
+            Group{
+                Text("Intervention Level: High")
+                    .font(.title3)
+                Toggle("Muscle Relaxation Exercise", isOn: $showMuscleRelax)
+                Toggle("Yoga Sequence", isOn: $showYoga)
+            }
         }
+        .onAppear(perform: {
+            person = UserDefaults.standard.getStructValue(forKey: "user")!
+            if getMovementLow()=="Grounding" {
+                showGrounding = true
+                showHands = false
+            } else {
+                showGrounding = false
+                showHands = true
+            }
+            if getMovementModerate()=="Walk" {
+                showWalk = true
+                showStretch = false
+            } else {
+                showWalk = false
+                showStretch = true
+            }
+            if getMovementHigh()=="MuscleRelaxation" {
+                showMuscleRelax = true
+                showYoga = false
+            } else {
+                showMuscleRelax = false
+                showYoga = true
+            }
+        })
     }
     func writeToUserDefaults() {
         UserDefaults.standard.setStructValue(value: person, forKey: "user")

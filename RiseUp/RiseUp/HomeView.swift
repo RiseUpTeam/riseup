@@ -24,7 +24,7 @@ struct HomeView: View {
                         .foregroundColor(.blue)
                     Spacer()
                     Text("Giving YOU the power to conquer your anxiety!")
-                        .font(.largeTitle)
+                        .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.blue)
                         .multilineTextAlignment(.center)
