@@ -21,7 +21,6 @@ struct BreathingActivitiesView: View {
     @State private var showCustomModerate = false
     @State private var showCustomHigh = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -109,7 +108,7 @@ struct BreathingActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -139,8 +138,7 @@ struct BreathingActivitiesView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
-        }
+            }.navigationBarTitle("Breathing Settings", displayMode: .large)
     }
 }
 

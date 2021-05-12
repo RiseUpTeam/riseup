@@ -11,8 +11,12 @@ import AppDevWithSwiftLibrary
 
 struct HistoryView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            Spacer()
+        NavigationView {
+            VStack(alignment: .center) {
+                Spacer()
+                Text("Hisotory View")
+                Spacer()
+            }.navigationBarTitle("History", displayMode: .large)
         }
     }
 }

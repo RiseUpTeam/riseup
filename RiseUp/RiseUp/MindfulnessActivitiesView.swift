@@ -17,7 +17,6 @@ struct MindfulnessActivitiesView: View {
     @State private var showLetGoLong = false
     @State private var showBreathingInLight = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -97,7 +96,7 @@ struct MindfulnessActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -122,8 +121,7 @@ struct MindfulnessActivitiesView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
-        }
+            }.navigationBarTitle("Mindfulness Settings", displayMode: .large)
     }
 }
 

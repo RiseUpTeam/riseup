@@ -17,7 +17,6 @@ struct JournalingActivitiesView: View {
     @State private var showPositiveThoughts = false
     @State private var showProblemQuestions = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -88,7 +87,7 @@ struct JournalingActivitiesView: View {
                             .padding()
                         Spacer()
                     }
-                    .background(Color.red)
+                    .background(Color.blue)
                     .listRowInsets(EdgeInsets(
                                     top: 0,
                                     leading: 0,
@@ -111,8 +110,7 @@ struct JournalingActivitiesView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
-        }
+            }.navigationBarTitle("Journaling Settings", displayMode: .large)
     }
 }
         

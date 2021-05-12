@@ -41,9 +41,7 @@ struct HeartRateView: View {
                     .frame(width:150, height: 50)
                     .opacity(0)
                     .border(Color.blue, width:3)
-                TextField("",text: $heartRate, onCommit: {
-                    calculateSeverity()
-                })
+                TextField("",text: $heartRate)
                 .frame(width: 150, height: 50, alignment: .center)
                 .multilineTextAlignment(.center)
             }.padding()
@@ -88,7 +86,8 @@ struct HeartRateView: View {
         Spacer()
         }
     }
-    func calculateSeverity() {
+    
+ /*   func calculateSeverity() {
         let hR = Double(heartRate)!
         if hR > 150.0  || level == 10 {
             s = 10
@@ -103,8 +102,9 @@ struct HeartRateView: View {
                 s = level
             }
         }
-    }
-}
+   }
+*/
+ }
 
 struct HeartRateView_Previews: PreviewProvider {
     static var previews: some View {

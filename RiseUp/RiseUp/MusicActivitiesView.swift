@@ -20,7 +20,6 @@ struct MusicActivitiesView: View {
     @State private var showCustomHigh = false
     
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -112,7 +111,7 @@ struct MusicActivitiesView: View {
                     
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -142,8 +141,7 @@ struct MusicActivitiesView: View {
                         }
                     }
                 }
-            }
-        }.navigationBarTitle("Pick Activity Settings")
+            }.navigationBarTitle("Music Settings", displayMode: .large)
     }
 }
 

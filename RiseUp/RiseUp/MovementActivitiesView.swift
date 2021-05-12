@@ -17,7 +17,6 @@ struct MovementActivitiesView: View {
     @State private var showMuscleRelax = false
     @State private var showYoga = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -94,7 +93,7 @@ struct MovementActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -119,9 +118,8 @@ struct MovementActivitiesView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
+            }.navigationBarTitle("Movement Settings", displayMode: .large)
         }
-    }
 }
 
 struct MovementActivitiesView_Previews: PreviewProvider {

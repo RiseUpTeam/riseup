@@ -491,7 +491,7 @@ struct ProfileView: View {
                 }
             }
             .padding(.horizontal)
-            .navigationBarTitle("User Profile", displayMode: .inline)
+            .navigationBarTitle("User Profile", displayMode: .large)
             .onAppear(perform: {
                 person = UserDefaults.standard.getStructValue(forKey: "user")!
                 userInputone = getName()

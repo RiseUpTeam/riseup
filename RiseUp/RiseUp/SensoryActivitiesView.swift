@@ -17,7 +17,6 @@ struct SensoryActivitiesView: View {
     @State private var showHoldYourSenses = false
     @State private var showFiveThings = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -93,7 +92,7 @@ struct SensoryActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -118,8 +117,7 @@ struct SensoryActivitiesView: View {
                         }
                     }
                 }
-            }
-        }.navigationBarTitle("Pick Activity Settings")
+        }.navigationBarTitle("Sensory Settings")
     }
 }
 

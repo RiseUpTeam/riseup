@@ -20,7 +20,6 @@ struct SelfTalkActivitiesView: View {
     @State private var showCustomModerate = false
     @State private var showCustomHigh = false
     var body: some View {
-        NavigationView{
             List{
                 Group{
                     Text("Choose one activity from each tier.")
@@ -110,7 +109,7 @@ struct SelfTalkActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.red)
+                .background(Color.blue)
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,
@@ -141,8 +140,7 @@ struct SelfTalkActivitiesView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Pick Activity Settings")
-        }
+            }.navigationBarTitle("Self Talk Settings", displayMode: .large)
     }
 }
 
