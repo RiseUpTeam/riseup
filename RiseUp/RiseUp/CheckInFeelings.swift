@@ -12,26 +12,87 @@ import AppDevWithSwiftLibrary
 struct CheckInFeelings: View {
     @Environment(\.presentationMode) var presentationMode
     @State var count = 0
-    @State var pressed : [String:Bool] = ["Worried":false, "Fearful":false,
+    @State var pressed : [String:Bool] = ["Happy":false, "Energized":false,
+                                          "Pleased":false, "Thoughtful":false,
+                                          "Worried":false, "Fearful":false,
                                           "Sad":false, "Restless":false,
                                           "Panicky":false, "Angry":false]
     let radius = CGFloat(15)
     var body: some View {
-//        NavigationView {
-            VStack {
-                Group {
-                    Image("Rise Up")
-                        .resizable().scaledToFit()
-                        .padding(0)
-                    Text("How are you feeling?")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
-                    Text("Please click all that apply.")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
-                        .padding()
+        //        NavigationView {
+        VStack {
+            Group {
+                Image("Rise Up")
+                    .resizable().scaledToFit()
+                    .padding(0)
+                Text("How are you feeling?")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                Text("Please click all that apply.")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                    .padding()
+            }
+            Group {
+                HStack {
+                    Button(action: {
+                        doPressed(b: "Happy")
+                    },
+                    label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: radius)
+                                .frame(width: 150, height: 55)
+                                .foregroundColor(pressed["Happy"]! ? Color("Light Green") : .green)
+                            Text("Happy")
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                        }
+                    })
+                    
+                    Button(action: {
+                        doPressed(b: "Energized")
+                    },
+                    label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: radius)
+                                .frame(width: 150, height: 55)
+                                .foregroundColor(pressed["Energized"]! ? Color("Light Green") : .green)
+                            Text("Energized")
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                        }
+                    })
+                }
+                HStack {
+                    Button(action: {
+                        doPressed(b: "Pleased")
+                    },
+                    label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: radius)
+                                .frame(width: 150, height: 55)
+                                .foregroundColor(pressed["Pleased"]! ? Color("Light Green") : .green)
+                            Text("Pleased")
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                        }
+                    })
+                    
+                    Button(action: {
+                        doPressed(b: "Thoughtful")
+                    },
+                    label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: radius)
+                                .frame(width: 150, height: 55)
+                                .foregroundColor(pressed["Thoughtful"]! ? Color("Light Green") : .green)
+                            Text("Thoughtful")
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                        }
+                    })
                 }
                 HStack {
                     Button(action: {
@@ -120,39 +181,40 @@ struct CheckInFeelings: View {
                         }
                     })
                 }
+            }
+            Spacer()
+            HStack {
                 Spacer()
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: radius)
-                                .frame(width: 100, height: 50)
-                                .foregroundColor(.blue)
-                            Text("Cancel")
-                                .fontWeight(.bold)
-                                .foregroundColor(.green)
-                        }
-                    })
-                    Spacer()
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: radius)
-                                .frame(width: 100, height: 50)
-                                .foregroundColor(.blue)
-                            Text("Submit")
-                                .fontWeight(.bold)
-                                .foregroundColor(.green)
-                        }
-                    })
-                    Spacer()
-                }.padding()
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Cancel")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
                 Spacer()
-            }//.navigationBarHidden(true)
-       // }
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: radius)
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.blue)
+                        Text("Submit")
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    }
+                })
+                Spacer()
+            }.padding()
+            Spacer()
+        }//.navigationBarHidden(true)
+        // }
     }
     
     func doPressed(b: String) {

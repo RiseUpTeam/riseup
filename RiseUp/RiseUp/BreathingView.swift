@@ -31,26 +31,24 @@ struct BreathingView: View {
             }.frame(width: 400, height: 400)
             .onAppear(){self.animate.toggle()}
             .animation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true))
-            VStack {
-                Text("Inhale")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color.blue)
-                    .onAppear(){
-                        withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
-                            fadeInOut.toggle()
-                        }
-                    } .opacity(fadeInOut ? 0 : 1)
-                Text("Exhale")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color.blue)
-                    .onAppear(){
-                        withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
-                            fadeInOut.toggle()
-                        }
-                    } .opacity(fadeInOut ? 1 : 0)
-            }
+            Text("Inhale")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.blue)
+                .onAppear(){
+                    withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
+                        fadeInOut.toggle()
+                    }
+                } .opacity(fadeInOut ? 0 : 1)
+            Text("Exhale")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.blue)
+                .onAppear(){
+                    withAnimation(Animation.easeInOut(duration: s).repeatForever(autoreverses: true)) {
+                        fadeInOut.toggle()
+                    }
+                } .opacity(fadeInOut ? 1 : 0)
         }
     }
 }

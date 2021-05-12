@@ -7,29 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B27DA02264B6718005F7359 /* MindfulnessActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9E8264B6717005F7359 /* MindfulnessActivitiesView.swift */; };
+		2B27DA04264B6718005F7359 /* CustomInterventionSelfTalkModerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9EA264B6717005F7359 /* CustomInterventionSelfTalkModerateView.swift */; };
+		2B27DA05264B6718005F7359 /* WhatIsMyFearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9EB264B6717005F7359 /* WhatIsMyFearView.swift */; };
+		2B27DA07264B6718005F7359 /* SelfTalkActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9ED264B6717005F7359 /* SelfTalkActivitiesView.swift */; };
+		2B27DA08264B6718005F7359 /* PositiveThoughtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9EE264B6717005F7359 /* PositiveThoughtsView.swift */; };
+		2B27DA09264B6718005F7359 /* CustomInterventionMusicModerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9EF264B6717005F7359 /* CustomInterventionMusicModerate.swift */; };
+		2B27DA0A264B6718005F7359 /* CustomInterventionBreathingModerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F0264B6717005F7359 /* CustomInterventionBreathingModerateView.swift */; };
+		2B27DA0B264B6718005F7359 /* CustomInterventionSelfTalkLowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F1264B6717005F7359 /* CustomInterventionSelfTalkLowView.swift */; };
+		2B27DA0C264B6718005F7359 /* CustomInterventionSelfTalkHighView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F2264B6717005F7359 /* CustomInterventionSelfTalkHighView.swift */; };
+		2B27DA0D264B6718005F7359 /* WhatAmIFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F3264B6717005F7359 /* WhatAmIFeelingView.swift */; };
+		2B27DA0E264B6718005F7359 /* SensoryActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F4264B6717005F7359 /* SensoryActivitiesView.swift */; };
+		2B27DA0F264B6718005F7359 /* CustomInterventionMusicLow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F5264B6717005F7359 /* CustomInterventionMusicLow.swift */; };
+		2B27DA10264B6718005F7359 /* CustomInterventionBreathingLowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F6264B6717005F7359 /* CustomInterventionBreathingLowView.swift */; };
+		2B27DA11264B6718005F7359 /* BreathingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F7264B6717005F7359 /* BreathingActivitiesView.swift */; };
+		2B27DA12264B6718005F7359 /* JournalingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F8264B6717005F7359 /* JournalingActivitiesView.swift */; };
+		2B27DA13264B6718005F7359 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9F9264B6717005F7359 /* BreathingView.swift */; };
+		2B27DA14264B6718005F7359 /* ProblemQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9FA264B6717005F7359 /* ProblemQuestionsView.swift */; };
+		2B27DA15264B6718005F7359 /* CustomInterventionMusicHighView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9FB264B6717005F7359 /* CustomInterventionMusicHighView.swift */; };
+		2B27DA16264B6718005F7359 /* 01 Tranquility.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B27D9FC264B6718005F7359 /* 01 Tranquility.mp3 */; };
+		2B27DA17264B6718005F7359 /* CustomInterventionBreathingHighView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9FD264B6718005F7359 /* CustomInterventionBreathingHighView.swift */; };
+		2B27DA18264B6718005F7359 /* KnowYourWhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9FE264B6718005F7359 /* KnowYourWhyView.swift */; };
+		2B27DA19264B6718005F7359 /* PositiveWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D9FF264B6718005F7359 /* PositiveWordView.swift */; };
+		2B27DA1A264B6718005F7359 /* MovementActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27DA00264B6718005F7359 /* MovementActivitiesView.swift */; };
+		2B27DA1B264B6718005F7359 /* MusicActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27DA01264B6718005F7359 /* MusicActivitiesView.swift */; };
+		2B27DA1D264B6BA6005F7359 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27DA1C264B6BA6005F7359 /* ActivitiesView.swift */; };
+		2B27DA1F264B6C68005F7359 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27DA1E264B6C68005F7359 /* ProfileView.swift */; };
 		2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4313042643073C006F44C4 /* HeartRateView.swift */; };
 		2B43130726430F98006F44C4 /* SplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43130626430F98006F44C4 /* SplitterView.swift */; };
-		2B722ABE2643FEC500E54742 /* SensoryActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */; };
-		2B722ABF2643FEC500E54742 /* JournalingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */; };
-		2B722AC02643FEC500E54742 /* BreathingActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */; };
-		2B722AC12643FEC500E54742 /* MusicActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */; };
-		2B722AC22643FEC500E54742 /* MovementActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */; };
-		2B722AC32643FEC500E54742 /* SelfTalkActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */; };
-		2B722AC42643FEC500E54742 /* MindfulnessActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */; };
 		2B784D20263A0E0D000183E4 /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2B784D1F263A0E0D000183E4 /* AppDevWithSwiftLibrary */; };
 		2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D21263B709A000183E4 /* CheckInFeelings.swift */; };
 		2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */; };
 		2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D25263B77B9000183E4 /* EmergencyView.swift */; };
-		2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */; };
-		2B7E2E7D2647458600685CCF /* PositiveThoughtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2E7A2647458600685CCF /* PositiveThoughtsView.swift */; };
-		2B7E2E7E2647458600685CCF /* KnowYourWhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2E7B2647458600685CCF /* KnowYourWhyView.swift */; };
-		2B7E2E7F2647458600685CCF /* WhatAmIFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2E7C2647458600685CCF /* WhatAmIFeelingView.swift */; };
-		2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057B263490160040C7FE /* ActivitiesView.swift */; };
-		2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87057E263490AC0040C7FE /* ProfileView.swift */; };
 		2B870582263490D00040C7FE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B870581263490D00040C7FE /* HistoryView.swift */; };
 		2B870586263493980040C7FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B870585263493980040C7FE /* HomeView.swift */; };
 		2B876C7C26444A710065A4F8 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B876C7B26444A710065A4F8 /* CheckInView.swift */; };
-		2BA76F262634E02800BBF203 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA76F252634E02800BBF203 /* BreathingView.swift */; };
 		2BCB0C4C2646C0B300268683 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB0C4B2646C0B300268683 /* SignInView.swift */; };
 		2BCB0C4E2646C55E00268683 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB0C4D2646C55E00268683 /* SignUpView.swift */; };
 		2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */; };
@@ -39,28 +51,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B27D9E8264B6717005F7359 /* MindfulnessActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindfulnessActivitiesView.swift; sourceTree = "<group>"; };
+		2B27D9EA264B6717005F7359 /* CustomInterventionSelfTalkModerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionSelfTalkModerateView.swift; sourceTree = "<group>"; };
+		2B27D9EB264B6717005F7359 /* WhatIsMyFearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatIsMyFearView.swift; sourceTree = "<group>"; };
+		2B27D9ED264B6717005F7359 /* SelfTalkActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTalkActivitiesView.swift; sourceTree = "<group>"; };
+		2B27D9EE264B6717005F7359 /* PositiveThoughtsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositiveThoughtsView.swift; sourceTree = "<group>"; };
+		2B27D9EF264B6717005F7359 /* CustomInterventionMusicModerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionMusicModerate.swift; sourceTree = "<group>"; };
+		2B27D9F0264B6717005F7359 /* CustomInterventionBreathingModerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionBreathingModerateView.swift; sourceTree = "<group>"; };
+		2B27D9F1264B6717005F7359 /* CustomInterventionSelfTalkLowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionSelfTalkLowView.swift; sourceTree = "<group>"; };
+		2B27D9F2264B6717005F7359 /* CustomInterventionSelfTalkHighView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionSelfTalkHighView.swift; sourceTree = "<group>"; };
+		2B27D9F3264B6717005F7359 /* WhatAmIFeelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatAmIFeelingView.swift; sourceTree = "<group>"; };
+		2B27D9F4264B6717005F7359 /* SensoryActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensoryActivitiesView.swift; sourceTree = "<group>"; };
+		2B27D9F5264B6717005F7359 /* CustomInterventionMusicLow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionMusicLow.swift; sourceTree = "<group>"; };
+		2B27D9F6264B6717005F7359 /* CustomInterventionBreathingLowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionBreathingLowView.swift; sourceTree = "<group>"; };
+		2B27D9F7264B6717005F7359 /* BreathingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingActivitiesView.swift; sourceTree = "<group>"; };
+		2B27D9F8264B6717005F7359 /* JournalingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalingActivitiesView.swift; sourceTree = "<group>"; };
+		2B27D9F9264B6717005F7359 /* BreathingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
+		2B27D9FA264B6717005F7359 /* ProblemQuestionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemQuestionsView.swift; sourceTree = "<group>"; };
+		2B27D9FB264B6717005F7359 /* CustomInterventionMusicHighView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionMusicHighView.swift; sourceTree = "<group>"; };
+		2B27D9FC264B6718005F7359 /* 01 Tranquility.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Tranquility.mp3"; sourceTree = "<group>"; };
+		2B27D9FD264B6718005F7359 /* CustomInterventionBreathingHighView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInterventionBreathingHighView.swift; sourceTree = "<group>"; };
+		2B27D9FE264B6718005F7359 /* KnowYourWhyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourWhyView.swift; sourceTree = "<group>"; };
+		2B27D9FF264B6718005F7359 /* PositiveWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositiveWordView.swift; sourceTree = "<group>"; };
+		2B27DA00264B6718005F7359 /* MovementActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementActivitiesView.swift; sourceTree = "<group>"; };
+		2B27DA01264B6718005F7359 /* MusicActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicActivitiesView.swift; sourceTree = "<group>"; };
+		2B27DA1C264B6BA6005F7359 /* ActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		2B27DA1E264B6C68005F7359 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2B4313042643073C006F44C4 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		2B43130626430F98006F44C4 /* SplitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterView.swift; sourceTree = "<group>"; };
-		2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensoryActivitiesView.swift; sourceTree = "<group>"; };
-		2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalingActivitiesView.swift; sourceTree = "<group>"; };
-		2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingActivitiesView.swift; sourceTree = "<group>"; };
-		2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicActivitiesView.swift; sourceTree = "<group>"; };
-		2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementActivitiesView.swift; sourceTree = "<group>"; };
-		2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTalkActivitiesView.swift; sourceTree = "<group>"; };
-		2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindfulnessActivitiesView.swift; sourceTree = "<group>"; };
 		2B784D21263B709A000183E4 /* CheckInFeelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInFeelings.swift; sourceTree = "<group>"; };
 		2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSymptomsView.swift; sourceTree = "<group>"; };
 		2B784D25263B77B9000183E4 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
-		2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionSettingsView.swift; sourceTree = "<group>"; };
-		2B7E2E7A2647458600685CCF /* PositiveThoughtsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositiveThoughtsView.swift; sourceTree = "<group>"; };
-		2B7E2E7B2647458600685CCF /* KnowYourWhyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourWhyView.swift; sourceTree = "<group>"; };
-		2B7E2E7C2647458600685CCF /* WhatAmIFeelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatAmIFeelingView.swift; sourceTree = "<group>"; };
-		2B87057B263490160040C7FE /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
-		2B87057E263490AC0040C7FE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2B870581263490D00040C7FE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		2B870585263493980040C7FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B876C7B26444A710065A4F8 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
-		2BA76F252634E02800BBF203 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		2BCB0C4B2646C0B300268683 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2BCB0C4D2646C55E00268683 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2BEE508F262C4CAC00ADA5B6 /* RiseUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiseUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,32 +126,44 @@
 		2BEE5091262C4CAC00ADA5B6 /* RiseUp */ = {
 			isa = PBXGroup;
 			children = (
+				2B27DA1E264B6C68005F7359 /* ProfileView.swift */,
+				2B27DA1C264B6BA6005F7359 /* ActivitiesView.swift */,
+				2B27D9FC264B6718005F7359 /* 01 Tranquility.mp3 */,
+				2B27D9F7264B6717005F7359 /* BreathingActivitiesView.swift */,
+				2B27D9F9264B6717005F7359 /* BreathingView.swift */,
+				2B27D9FD264B6718005F7359 /* CustomInterventionBreathingHighView.swift */,
+				2B27D9F6264B6717005F7359 /* CustomInterventionBreathingLowView.swift */,
+				2B27D9F0264B6717005F7359 /* CustomInterventionBreathingModerateView.swift */,
+				2B27D9FB264B6717005F7359 /* CustomInterventionMusicHighView.swift */,
+				2B27D9F5264B6717005F7359 /* CustomInterventionMusicLow.swift */,
+				2B27D9EF264B6717005F7359 /* CustomInterventionMusicModerate.swift */,
+				2B27D9F2264B6717005F7359 /* CustomInterventionSelfTalkHighView.swift */,
+				2B27D9F1264B6717005F7359 /* CustomInterventionSelfTalkLowView.swift */,
+				2B27D9EA264B6717005F7359 /* CustomInterventionSelfTalkModerateView.swift */,
+				2B27D9F8264B6717005F7359 /* JournalingActivitiesView.swift */,
+				2B27D9FE264B6718005F7359 /* KnowYourWhyView.swift */,
+				2B27D9E8264B6717005F7359 /* MindfulnessActivitiesView.swift */,
+				2B27DA00264B6718005F7359 /* MovementActivitiesView.swift */,
+				2B27DA01264B6718005F7359 /* MusicActivitiesView.swift */,
+				2B27D9EE264B6717005F7359 /* PositiveThoughtsView.swift */,
+				2B27D9FF264B6718005F7359 /* PositiveWordView.swift */,
+				2B27D9FA264B6717005F7359 /* ProblemQuestionsView.swift */,
+				2B27D9ED264B6717005F7359 /* SelfTalkActivitiesView.swift */,
+				2B27D9F4264B6717005F7359 /* SensoryActivitiesView.swift */,
+				2B27D9F3264B6717005F7359 /* WhatAmIFeelingView.swift */,
+				2B27D9EB264B6717005F7359 /* WhatIsMyFearView.swift */,
 				2BEE5092262C4CAC00ADA5B6 /* RiseUpApp.swift */,
-				2B87057B263490160040C7FE /* ActivitiesView.swift */,
-				2B722AB92643FEC500E54742 /* BreathingActivitiesView.swift */,
-				2B722AB82643FEC500E54742 /* JournalingActivitiesView.swift */,
-				2B722ABD2643FEC500E54742 /* MindfulnessActivitiesView.swift */,
-				2B722ABB2643FEC500E54742 /* MovementActivitiesView.swift */,
-				2B722ABA2643FEC500E54742 /* MusicActivitiesView.swift */,
-				2B722ABC2643FEC500E54742 /* SelfTalkActivitiesView.swift */,
-				2B722AB72643FEC500E54742 /* SensoryActivitiesView.swift */,
-				2BA76F252634E02800BBF203 /* BreathingView.swift */,
 				2B870585263493980040C7FE /* HomeView.swift */,
 				2BCB0C4B2646C0B300268683 /* SignInView.swift */,
 				2B784D25263B77B9000183E4 /* EmergencyView.swift */,
-				2B784D27263B77EF000183E4 /* InterventionSettingsView.swift */,
 				2BEE5094262C4CAC00ADA5B6 /* ContentView.swift */,
 				2BCB0C4D2646C55E00268683 /* SignUpView.swift */,
 				2B784D21263B709A000183E4 /* CheckInFeelings.swift */,
 				2B876C7B26444A710065A4F8 /* CheckInView.swift */,
 				2B784D23263B7235000183E4 /* CheckInSymptomsView.swift */,
-				2B7E2E7B2647458600685CCF /* KnowYourWhyView.swift */,
-				2B7E2E7A2647458600685CCF /* PositiveThoughtsView.swift */,
-				2B7E2E7C2647458600685CCF /* WhatAmIFeelingView.swift */,
 				2B4313042643073C006F44C4 /* HeartRateView.swift */,
 				2B43130626430F98006F44C4 /* SplitterView.swift */,
 				2B870581263490D00040C7FE /* HistoryView.swift */,
-				2B87057E263490AC0040C7FE /* ProfileView.swift */,
 				2BEE5096262C4CAD00ADA5B6 /* Assets.xcassets */,
 				2BEE509B262C4CAD00ADA5B6 /* Info.plist */,
 				2BEE5098262C4CAD00ADA5B6 /* Preview Content */,
@@ -207,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEE509A262C4CAD00ADA5B6 /* Preview Assets.xcassets in Resources */,
+				2B27DA16264B6718005F7359 /* 01 Tranquility.mp3 in Resources */,
 				2BEE5097262C4CAD00ADA5B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,32 +255,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B722AC22643FEC500E54742 /* MovementActivitiesView.swift in Sources */,
-				2B87057F263490AC0040C7FE /* ProfileView.swift in Sources */,
-				2B722ABE2643FEC500E54742 /* SensoryActivitiesView.swift in Sources */,
-				2B87057C263490160040C7FE /* ActivitiesView.swift in Sources */,
+				2B27DA0F264B6718005F7359 /* CustomInterventionMusicLow.swift in Sources */,
+				2B27DA18264B6718005F7359 /* KnowYourWhyView.swift in Sources */,
+				2B27DA14264B6718005F7359 /* ProblemQuestionsView.swift in Sources */,
+				2B27DA19264B6718005F7359 /* PositiveWordView.swift in Sources */,
+				2B27DA12264B6718005F7359 /* JournalingActivitiesView.swift in Sources */,
+				2B27DA0E264B6718005F7359 /* SensoryActivitiesView.swift in Sources */,
+				2B27DA1F264B6C68005F7359 /* ProfileView.swift in Sources */,
+				2B27DA08264B6718005F7359 /* PositiveThoughtsView.swift in Sources */,
+				2B27DA09264B6718005F7359 /* CustomInterventionMusicModerate.swift in Sources */,
+				2B27DA05264B6718005F7359 /* WhatIsMyFearView.swift in Sources */,
 				2B784D22263B709A000183E4 /* CheckInFeelings.swift in Sources */,
+				2B27DA0A264B6718005F7359 /* CustomInterventionBreathingModerateView.swift in Sources */,
+				2B27DA11264B6718005F7359 /* BreathingActivitiesView.swift in Sources */,
 				2BCB0C4E2646C55E00268683 /* SignUpView.swift in Sources */,
-				2BA76F262634E02800BBF203 /* BreathingView.swift in Sources */,
-				2B7E2E7F2647458600685CCF /* WhatAmIFeelingView.swift in Sources */,
-				2B722ABF2643FEC500E54742 /* JournalingActivitiesView.swift in Sources */,
+				2B27DA13264B6718005F7359 /* BreathingView.swift in Sources */,
 				2B870582263490D00040C7FE /* HistoryView.swift in Sources */,
-				2B7E2E7D2647458600685CCF /* PositiveThoughtsView.swift in Sources */,
 				2B876C7C26444A710065A4F8 /* CheckInView.swift in Sources */,
 				2B4313052643073C006F44C4 /* HeartRateView.swift in Sources */,
+				2B27DA1A264B6718005F7359 /* MovementActivitiesView.swift in Sources */,
 				2B870586263493980040C7FE /* HomeView.swift in Sources */,
-				2B722AC42643FEC500E54742 /* MindfulnessActivitiesView.swift in Sources */,
-				2B722AC32643FEC500E54742 /* SelfTalkActivitiesView.swift in Sources */,
+				2B27DA17264B6718005F7359 /* CustomInterventionBreathingHighView.swift in Sources */,
+				2B27DA10264B6718005F7359 /* CustomInterventionBreathingLowView.swift in Sources */,
+				2B27DA0D264B6718005F7359 /* WhatAmIFeelingView.swift in Sources */,
 				2BEE5095262C4CAC00ADA5B6 /* ContentView.swift in Sources */,
+				2B27DA07264B6718005F7359 /* SelfTalkActivitiesView.swift in Sources */,
 				2BCB0C4C2646C0B300268683 /* SignInView.swift in Sources */,
-				2B784D28263B77EF000183E4 /* InterventionSettingsView.swift in Sources */,
+				2B27DA04264B6718005F7359 /* CustomInterventionSelfTalkModerateView.swift in Sources */,
 				2B784D24263B7235000183E4 /* CheckInSymptomsView.swift in Sources */,
-				2B722AC02643FEC500E54742 /* BreathingActivitiesView.swift in Sources */,
+				2B27DA1B264B6718005F7359 /* MusicActivitiesView.swift in Sources */,
 				2B784D26263B77B9000183E4 /* EmergencyView.swift in Sources */,
+				2B27DA1D264B6BA6005F7359 /* ActivitiesView.swift in Sources */,
+				2B27DA02264B6718005F7359 /* MindfulnessActivitiesView.swift in Sources */,
 				2BEE5093262C4CAC00ADA5B6 /* RiseUpApp.swift in Sources */,
+				2B27DA0B264B6718005F7359 /* CustomInterventionSelfTalkLowView.swift in Sources */,
+				2B27DA15264B6718005F7359 /* CustomInterventionMusicHighView.swift in Sources */,
 				2B43130726430F98006F44C4 /* SplitterView.swift in Sources */,
-				2B722AC12643FEC500E54742 /* MusicActivitiesView.swift in Sources */,
-				2B7E2E7E2647458600685CCF /* KnowYourWhyView.swift in Sources */,
+				2B27DA0C264B6718005F7359 /* CustomInterventionSelfTalkHighView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
