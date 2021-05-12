@@ -10,12 +10,12 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct SelfTalkActivitiesView: View {
-    @State private var showMantra = false
+    @State private var showMantra = true
     @State private var showValidation = false
-    @State private var showBreakDown = false
+    @State private var showBreakDown = true
     @State private var showReframe = false
     @State private var showThoughtFeelingConnection = false
-    @State private var showUnravelYourThoughts = false
+    @State private var showUnravelYourThoughts = true
     @State private var showCustomLow = false
     @State private var showCustomModerate = false
     @State private var showCustomHigh = false

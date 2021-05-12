@@ -11,11 +11,11 @@ import AppDevWithSwiftLibrary
 
 struct MovementActivitiesView: View {
     @State private var showGrounding = false
-    @State private var showHand = false
+    @State private var showHand = true
     @State private var showWalk = false
-    @State private var showStretch = false
+    @State private var showStretch = true
     @State private var showMuscleRelax = false
-    @State private var showYoga = false
+    @State private var showYoga = true
     var body: some View {
             List{
                 Group{

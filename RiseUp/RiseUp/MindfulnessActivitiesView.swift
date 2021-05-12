@@ -10,11 +10,11 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct MindfulnessActivitiesView: View {
-    @State private var showMindfulRelease = false
+    @State private var showMindfulRelease = true
     @State private var showLetGoShort = false
-    @State private var showReleasing = false
+    @State private var showReleasing = true
     @State private var showAnxietyAndPeace = false
-    @State private var showLetGoLong = false
+    @State private var showLetGoLong = true
     @State private var showBreathingInLight = false
     var body: some View {
             List{

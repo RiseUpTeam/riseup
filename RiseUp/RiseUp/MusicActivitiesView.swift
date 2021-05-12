@@ -10,11 +10,11 @@ import SwiftUI
 
 struct MusicActivitiesView: View {
     @State private var showWeightless = false
-    @State private var showElectra = false
+    @State private var showElectra = true
     @State private var showWatermark = false
-    @State private var showBeyond = false
+    @State private var showBeyond = true
     @State private var showWavesAndWater = false
-    @State private var showNature = false
+    @State private var showNature = true
     @State private var showCustomLow = false
     @State private var showCustomModerate = false
     @State private var showCustomHigh = false

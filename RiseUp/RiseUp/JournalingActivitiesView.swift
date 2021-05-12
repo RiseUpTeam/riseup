@@ -10,11 +10,11 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct JournalingActivitiesView: View {
-    @State private var showWhatAmIFeeling = false
+    @State private var showWhatAmIFeeling = true
     @State private var showWhatIsMyFear = false
     @State private var showWhy = false
-    @State private var showPositiveWord = false
-    @State private var showPositiveThoughts = false
+    @State private var showPositiveWord = true
+    @State private var showPositiveThoughts = true
     @State private var showProblemQuestions = false
     var body: some View {
             List{

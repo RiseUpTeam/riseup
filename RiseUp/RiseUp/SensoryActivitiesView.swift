@@ -11,10 +11,10 @@ import AppDevWithSwiftLibrary
 
 struct SensoryActivitiesView: View {
     @State private var showMusicSketch = false
-    @State private var showColoring = false
+    @State private var showColoring = true
     @State private var showPressurePoints = false
-    @State private var showTemperatureChange = false
-    @State private var showHoldYourSenses = false
+    @State private var showTemperatureChange = true
+    @State private var showHoldYourSenses = true
     @State private var showFiveThings = false
     var body: some View {
             List{

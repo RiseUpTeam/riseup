@@ -11,11 +11,11 @@ import Foundation
 import AppDevWithSwiftLibrary
 
 struct BreathingActivitiesView: View {
-    @State private var showSlowBreathing = false
+    @State private var showSlowBreathing = true
     @State private var showLongExhale = false
     @State private var showFocusedBreath = false
-    @State private var showEqualBreath = false
-    @State private var showTriangle = false
+    @State private var showEqualBreath = true
+    @State private var showTriangle = true
     @State private var showDeepBreathing = false
     @State private var showCustomLow = false
     @State private var showCustomModerate = false
