@@ -61,7 +61,7 @@ struct SensoryActivitiesView: View {
                         .padding()
                     Spacer()
                 }
-                .background(Color.yellow)
+                .background(Color("Gold"))
                 .listRowInsets(EdgeInsets(
                                 top: 0,
                                 leading: 0,

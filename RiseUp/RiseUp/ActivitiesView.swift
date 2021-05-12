@@ -10,6 +10,7 @@ import SwiftUI
 struct ActivitiesView: View {
     var w = CGFloat(130)
     var h = CGFloat(48)
+    var y = Color("Gold")
     var body: some View {
         NavigationView {
             ScrollView {
@@ -43,7 +44,7 @@ struct ActivitiesView: View {
                                     .padding([.leading, .trailing])
                                     .frame(width: w*9/10, height: h)
                                 //    .border(Color.black, width: 1)
-                                    .background(Color.yellow)
+                                    .background(y)
                                 Text("High")
                                     .font(.title2)
                                     .fontWeight(.bold)
@@ -78,7 +79,7 @@ struct ActivitiesView: View {
                                     .padding([.leading, .trailing],30)
                                     .frame(width: 2*w, height: h)
                                //     .border(Color.black, width: 1)
-                                    .background(Color.yellow)
+                                    .background(y)
                                     .padding(.bottom,1)
                             }
                             Link(destination:URL(string:"https://www.youtube.com/watch?v=E7qRkUYu580")!) {
@@ -117,7 +118,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                          //       .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         Link(destination:URL(string:"https://www.youtube.com/watch?v=QcCdiGBd4ok")!) {
@@ -155,7 +156,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                         //        .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         Link(destination:URL(string:"https://insighttimer.com/kennethsoares/guided-meditations/let-go-of-fear-worries-and-anxiety")!) {
@@ -193,7 +194,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                         //        .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         Link(destination:URL(string:"https://insighttimer.com/julieaelbrecht/guided-meditations/progressive-muscle-relaxation-e")!) {
@@ -231,7 +232,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                         //        .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         Link(destination:URL(string:"https://www.youtube.com/watch?v=-gd7KZBniWs")!) {
@@ -269,7 +270,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                           //      .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         Link(destination:URL(string:"https://www.youtube.com/watch?v=30VMIEmA114")!) {
@@ -307,7 +308,7 @@ struct ActivitiesView: View {
                                 .padding([.leading, .trailing],30)
                                 .frame(width: 2*w, height: h)
                             //    .border(Color.black, width: 1)
-                                .background(Color.yellow)
+                                .background(y)
                                 .padding(.bottom,1)
                         }
                         NavigationLink(destination: PositiveThoughtsView()){
